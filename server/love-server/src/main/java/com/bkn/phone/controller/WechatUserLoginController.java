@@ -47,44 +47,36 @@ public class WechatUserLoginController extends WechatOauthBaseController{
      */
     @RequestMapping(value = "app/register", method = RequestMethod.GET) 
     public ModelAndView userRrgister(HttpServletRequest request, HttpServletResponse response) {
-        ModelAndView modelAndView = new ModelAndView("uclubdoctor/register");
-        return modelAndView;
-    }
-    
-    
-    /**
-     * 查询聊呗信息
-    * @author 高国藩
-    * @date 2019年6月17日 下午5:17:52
-    * @param request
-    * @param response
-    * @param key
-    * @return
-     */
-    @RequestMapping(value = "app/query/key", method = RequestMethod.GET) 
-    public ModelAndView userQueryKey(HttpServletRequest request, HttpServletResponse response, String key) {
-        return wechatUserPersonService.userQueryKey(key);
-    }
-    
-    
-    
-    /**
-     * 移动端绑定
-    * @author 高国藩
-    * @date 2017年3月23日 下午2:20:13
-    * @param request    request
-    * @param response   response
-    * @return           ModelAndView
-     */
-    @RequestMapping(value = RouteConfig.WechatUser.WECHAT_USER_LOGIN_VIEW, method = RequestMethod.GET)
-    public ModelAndView viewUserLoginPage(HttpServletRequest request, HttpServletResponse response){
         String openId = getOpenId(request, response, App.Wechat.WECHAT_APP_ID_BKN);
         if (StringUtil.isEmpty(openId)){
             return null;
         }
         setJsapiSignData(request);
         logger.info(openId);
-        return wechatUserPersonService.viewUserLoginPage(openId);
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/注册中心");
+        return modelAndView;
+    }
+    
+    
+    
+    /**
+     * 注册操作
+    * @author 高国藩
+    * @date 2019年6月17日 下午8:03:04
+    * @param request
+    * @param response
+    * @param phone
+    * @param code
+    * @return
+     */
+    @RequestMapping(value = RouteConfig.WechatUser.WECHAT_USER_LOGIN_VIEW, method = RequestMethod.POST)
+    @ResponseBody
+    public BaseDto viewUserLoginAction(HttpServletRequest request, HttpServletResponse response, String phone, String code){
+        String openId = getOpenId(request, response, App.Wechat.WECHAT_APP_ID_BKN);
+        if (StringUtil.isEmpty(openId)){
+            return null;
+        }
+        return wechatUserPersonService.viewUserLoginAction(openId, getAccessToken(), phone, code, request); 
     }
     
     
@@ -103,4 +95,19 @@ public class WechatUserLoginController extends WechatOauthBaseController{
         return wechatUserPersonService.getVerifyCodeAction(phone);
     }
     
+    
+    
+    /**
+     * 查询聊呗信息
+    * @author 高国藩
+    * @date 2019年6月17日 下午5:17:52
+    * @param request
+    * @param response
+    * @param key
+    * @return
+     */
+    @RequestMapping(value = "app/query/key", method = RequestMethod.GET) 
+    public ModelAndView userQueryKey(HttpServletRequest request, HttpServletResponse response, String key) {
+        return wechatUserPersonService.userQueryKey(key);
+    }
 }

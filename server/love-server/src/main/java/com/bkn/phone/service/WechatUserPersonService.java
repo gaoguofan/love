@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,11 +20,15 @@ import com.bkn.browser.config.RouteConfig;
 import com.bkn.browser.mybatis.LoveLiaobeiAnswerMapper;
 import com.bkn.browser.mybatis.LoveLiaobeiQuestionMapper;
 import com.bkn.browser.mybatis.LoveUserInfoMapper;
+import com.bkn.browser.utils.DateUtil;
+import com.bkn.browser.utils.HttpClientUtil;
 import com.bkn.system.dto.BaseDto;
 import com.bkn.system.entity.LoveLiaobeiQuestion;
 import com.bkn.system.entity.LoveUserInfo;
 import com.bkn.system.service.RedisService;
 import com.bkn.system.service.SmsService;
+
+import net.sf.json.JSONObject;
 
 
 /**
@@ -113,6 +119,39 @@ public class WechatUserPersonService {
         modelAndView.addObject("liaobeiQuestions", liaobeiQuestions);
         System.out.println(net.sf.json.JSONArray.fromObject(liaobeiQuestions));
         return modelAndView;
+    }
+
+
+    /**
+     * 实现注册操作
+    * @author 高国藩
+    * @date 2019年6月17日 下午8:04:40
+    * @param openId
+    * @param accessToken
+    * @param phone
+    * @param code
+    * @param request
+    * @return
+     */
+    public BaseDto viewUserLoginAction(String openId, String accessToken,
+            String phone, String code, HttpServletRequest request) {
+        if(code.equals(redisService.get(App.Redis.PHONE_VERIFY_CODE_KEY_PRE + phone))) {
+            String userInfoRes = HttpClientUtil.sendGetReq(String.format(App.Wechat.GET_USER_INFO_URL, new Object[] {accessToken, openId}), "utf-8");
+            JSONObject userInfoJson = JSONObject.fromObject(userInfoRes);
+            String sex = userInfoJson.getString("sex");
+            String userName = userInfoJson.getString("nickname");
+            userName = getChinese(userName);
+            String imagePath = userInfoJson.getString("headimgurl");
+            LoveUserInfo bknNewMemberInfo = new LoveUserInfo();
+            bknNewMemberInfo.setPhone(phone);
+            bknNewMemberInfo.setWechatOpenId(openId);
+            bknNewMemberInfo.setUserName(userName);
+            bknNewMemberInfo.setImagePath(imagePath);
+            bknNewMemberInfo.setSex(sex.equals("1") ? "男" : "女");
+            loveUserInfoMapper.insertSelective(bknNewMemberInfo);
+            return new BaseDto(App.System.API_RESULT_CODE_FOR_SUCCEES, "注册成功");
+        }
+        return new BaseDto(App.System.API_RESULT_CODE_FOR_FAIL, "验证码错误");
     }
 
     

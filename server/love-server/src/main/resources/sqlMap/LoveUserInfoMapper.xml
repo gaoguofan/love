@@ -5,11 +5,14 @@
     <id column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="phone" jdbcType="CHAR" property="phone" />
     <result column="wechat_open_id" jdbcType="VARCHAR" property="wechatOpenId" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="image_path" jdbcType="VARCHAR" property="imagePath" />
     <result column="is_vip" jdbcType="BIT" property="isVip" />
     <result column="vip_exprise" jdbcType="CHAR" property="vipExprise" />
   </resultMap>
   <sql id="Base_Column_List">
-    user_id, phone, wechat_open_id, is_vip, vip_exprise
+    user_id, phone, wechat_open_id, sex, user_name, image_path, is_vip, vip_exprise
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -21,23 +24,31 @@
     delete from love_user_info
     where user_id = #{userId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.bkn.system.entity.LoveUserInfo">
-    insert into love_user_info (user_id, phone, wechat_open_id, 
-      is_vip, vip_exprise)
-    values (#{userId,jdbcType=INTEGER}, #{phone,jdbcType=CHAR}, #{wechatOpenId,jdbcType=VARCHAR}, 
-      #{isVip,jdbcType=BIT}, #{vipExprise,jdbcType=CHAR})
+  <insert id="insert" keyColumn="user_id" keyProperty="userId" parameterType="com.bkn.system.entity.LoveUserInfo" useGeneratedKeys="true">
+    insert into love_user_info (phone, wechat_open_id, sex, 
+      user_name, image_path, is_vip, 
+      vip_exprise)
+    values (#{phone,jdbcType=CHAR}, #{wechatOpenId,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
+      #{userName,jdbcType=VARCHAR}, #{imagePath,jdbcType=VARCHAR}, #{isVip,jdbcType=BIT}, 
+      #{vipExprise,jdbcType=CHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.bkn.system.entity.LoveUserInfo">
+  <insert id="insertSelective" keyColumn="user_id" keyProperty="userId" parameterType="com.bkn.system.entity.LoveUserInfo" useGeneratedKeys="true">
     insert into love_user_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        user_id,
-      </if>
       <if test="phone != null">
         phone,
       </if>
       <if test="wechatOpenId != null">
         wechat_open_id,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="imagePath != null">
+        image_path,
       </if>
       <if test="isVip != null">
         is_vip,
@@ -47,14 +58,20 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        #{userId,jdbcType=INTEGER},
-      </if>
       <if test="phone != null">
         #{phone,jdbcType=CHAR},
       </if>
       <if test="wechatOpenId != null">
         #{wechatOpenId,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="imagePath != null">
+        #{imagePath,jdbcType=VARCHAR},
       </if>
       <if test="isVip != null">
         #{isVip,jdbcType=BIT},
@@ -73,6 +90,15 @@
       <if test="wechatOpenId != null">
         wechat_open_id = #{wechatOpenId,jdbcType=VARCHAR},
       </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="imagePath != null">
+        image_path = #{imagePath,jdbcType=VARCHAR},
+      </if>
       <if test="isVip != null">
         is_vip = #{isVip,jdbcType=BIT},
       </if>
@@ -86,11 +112,17 @@
     update love_user_info
     set phone = #{phone,jdbcType=CHAR},
       wechat_open_id = #{wechatOpenId,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      image_path = #{imagePath,jdbcType=VARCHAR},
       is_vip = #{isVip,jdbcType=BIT},
       vip_exprise = #{vipExprise,jdbcType=CHAR}
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
   <select id="selectByWechatId" parameterType="java.util.Map" resultMap="BaseResultMap">
   	select * from love_user_info where wechat_open_id = #{wechatOpenId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByPhone" parameterType="java.util.Map" resultMap="BaseResultMap">
+  	select * from love_user_info where phone = #{phone,jdbcType=CHAR}
   </select>
 </mapper>

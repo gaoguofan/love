@@ -19,4 +19,6 @@ public interface LoveUserInfoMapper {
     int updateByPrimaryKey(LoveUserInfo record);
 
     LoveUserInfo selectByWechatId(@Param("wechatOpenId") String openId);
+    
+    LoveUserInfo selectByPhone(@Param("phone") String phone);
 }
