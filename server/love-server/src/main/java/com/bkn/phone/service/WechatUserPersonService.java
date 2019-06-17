@@ -1,15 +1,9 @@
 package com.bkn.phone.service;
 
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,21 +11,19 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.alibaba.fastjson.JSONArray;
 import com.bkn.browser.config.App;
 import com.bkn.browser.config.PageConfig;
 import com.bkn.browser.config.RouteConfig;
+import com.bkn.browser.mybatis.LoveLiaobeiAnswerMapper;
+import com.bkn.browser.mybatis.LoveLiaobeiQuestionMapper;
 import com.bkn.browser.mybatis.LoveUserInfoMapper;
-import com.bkn.browser.utils.AddressUtils;
-import com.bkn.browser.utils.DateUtil;
-import com.bkn.browser.utils.HttpClientUtil;
-import com.bkn.browser.utils.StringUtil;
 import com.bkn.system.dto.BaseDto;
+import com.bkn.system.entity.LoveLiaobeiQuestion;
 import com.bkn.system.entity.LoveUserInfo;
 import com.bkn.system.service.RedisService;
 import com.bkn.system.service.SmsService;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 /**
  * 移动端用户个人版面
@@ -49,6 +41,8 @@ public class WechatUserPersonService {
     private SmsService smsService;
     
     @Autowired LoveUserInfoMapper loveUserInfoMapper;
+    @Autowired LoveLiaobeiQuestionMapper liaobeiQuestionMapper;
+    @Autowired LoveLiaobeiAnswerMapper loveLiaobeiAnswerMapper;
     
     
     /**
@@ -103,6 +97,22 @@ public class WechatUserPersonService {
             str+= matcher.group(0);
         }
         return str;
+    }
+
+
+    /**
+     * 搜索聊呗信息
+    * @author 高国藩
+    * @date 2019年6月17日 下午5:27:13
+    * @param key
+    * @return
+     */
+    public ModelAndView userQueryKey(String key) {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/话术搜索");
+        List<LoveLiaobeiQuestion> liaobeiQuestions =  liaobeiQuestionMapper.selectByKeyAndPageInfo(key);
+        modelAndView.addObject("liaobeiQuestions", liaobeiQuestions);
+        System.out.println(net.sf.json.JSONArray.fromObject(liaobeiQuestions));
+        return modelAndView;
     }
 
     

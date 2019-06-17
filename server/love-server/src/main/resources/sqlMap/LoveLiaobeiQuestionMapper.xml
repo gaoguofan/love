@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bkn.browser.mybatis.LoveLiaobeiQuestionMapper">
+  <resultMap id="BaseResultMap" type="com.bkn.system.entity.LoveLiaobeiQuestion">
+    <id column="question_id" jdbcType="INTEGER" property="questionId" />
+    <result column="search_count" jdbcType="INTEGER" property="searchCount" />
+    <result column="question_desc" jdbcType="VARCHAR" property="questionDesc" />
+    <result column="question_tags" jdbcType="VARCHAR" property="questionTags" />
+    <result column="question_next" jdbcType="INTEGER" property="questionNext" />
+    <result column="tutor_id" jdbcType="INTEGER" property="tutorId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    question_id, search_count, question_desc, question_tags, question_next, tutor_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from love_liaobei_question
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from love_liaobei_question
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bkn.system.entity.LoveLiaobeiQuestion">
+    insert into love_liaobei_question (question_id, search_count, question_desc, 
+      question_tags, question_next, tutor_id
+      )
+    values (#{questionId,jdbcType=INTEGER}, #{searchCount,jdbcType=INTEGER}, #{questionDesc,jdbcType=VARCHAR}, 
+      #{questionTags,jdbcType=VARCHAR}, #{questionNext,jdbcType=INTEGER}, #{tutorId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.bkn.system.entity.LoveLiaobeiQuestion">
+    insert into love_liaobei_question
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="questionId != null">
+        question_id,
+      </if>
+      <if test="searchCount != null">
+        search_count,
+      </if>
+      <if test="questionDesc != null">
+        question_desc,
+      </if>
+      <if test="questionTags != null">
+        question_tags,
+      </if>
+      <if test="questionNext != null">
+        question_next,
+      </if>
+      <if test="tutorId != null">
+        tutor_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="questionId != null">
+        #{questionId,jdbcType=INTEGER},
+      </if>
+      <if test="searchCount != null">
+        #{searchCount,jdbcType=INTEGER},
+      </if>
+      <if test="questionDesc != null">
+        #{questionDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="questionTags != null">
+        #{questionTags,jdbcType=VARCHAR},
+      </if>
+      <if test="questionNext != null">
+        #{questionNext,jdbcType=INTEGER},
+      </if>
+      <if test="tutorId != null">
+        #{tutorId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bkn.system.entity.LoveLiaobeiQuestion">
+    update love_liaobei_question
+    <set>
+      <if test="searchCount != null">
+        search_count = #{searchCount,jdbcType=INTEGER},
+      </if>
+      <if test="questionDesc != null">
+        question_desc = #{questionDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="questionTags != null">
+        question_tags = #{questionTags,jdbcType=VARCHAR},
+      </if>
+      <if test="questionNext != null">
+        question_next = #{questionNext,jdbcType=INTEGER},
+      </if>
+      <if test="tutorId != null">
+        tutor_id = #{tutorId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bkn.system.entity.LoveLiaobeiQuestion">
+    update love_liaobei_question
+    set search_count = #{searchCount,jdbcType=INTEGER},
+      question_desc = #{questionDesc,jdbcType=VARCHAR},
+      question_tags = #{questionTags,jdbcType=VARCHAR},
+      question_next = #{questionNext,jdbcType=INTEGER},
+      tutor_id = #{tutorId,jdbcType=INTEGER}
+    where question_id = #{questionId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="ResultMap" type="com.bkn.system.entity.LoveLiaobeiQuestion">
+    <id column="question_id" jdbcType="INTEGER" property="questionId" />
+    <result column="search_count" jdbcType="INTEGER" property="searchCount" />
+    <result column="question_desc" jdbcType="VARCHAR" property="questionDesc" />
+    <result column="question_tags" jdbcType="VARCHAR" property="questionTags" />
+    <result column="question_next" jdbcType="INTEGER" property="questionNext" />
+    <result column="tutor_id" jdbcType="INTEGER" property="tutorId" />
+    <association property="answers" column="question_id" select="com.bkn.browser.mybatis.LoveLiaobeiAnswerMapper.selectByQuestionId"></association>
+    <association property="question" column="question_next" select="com.bkn.browser.mybatis.LoveLiaobeiQuestionMapper.selectNextQuestionAndAnswer"></association>
+  </resultMap>
+  <select id="selectNextQuestionAndAnswer" parameterType="java.lang.Integer" resultMap="ResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from love_liaobei_question
+    where question_id = #{questionId,jdbcType=INTEGER} 
+  </select>
+  <select id="selectByKeyAndPageInfo" parameterType="java.util.Map" resultMap="ResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from love_liaobei_question
+    where 
+    question_desc like CONCAT('%',#{key},'%')
+  </select>
+</mapper>

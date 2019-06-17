@@ -38,6 +38,37 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     
     /**
+     * 前往注册网页
+    * @author 高国藩
+    * @date 2019年6月17日 下午4:51:47
+    * @param request
+    * @param response
+    * @return
+     */
+    @RequestMapping(value = "app/register", method = RequestMethod.GET) 
+    public ModelAndView userRrgister(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/register");
+        return modelAndView;
+    }
+    
+    
+    /**
+     * 查询聊呗信息
+    * @author 高国藩
+    * @date 2019年6月17日 下午5:17:52
+    * @param request
+    * @param response
+    * @param key
+    * @return
+     */
+    @RequestMapping(value = "app/query/key", method = RequestMethod.GET) 
+    public ModelAndView userQueryKey(HttpServletRequest request, HttpServletResponse response, String key) {
+        return wechatUserPersonService.userQueryKey(key);
+    }
+    
+    
+    
+    /**
      * 移动端绑定
     * @author 高国藩
     * @date 2017年3月23日 下午2:20:13

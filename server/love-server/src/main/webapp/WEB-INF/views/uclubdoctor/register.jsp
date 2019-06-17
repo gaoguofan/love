@@ -475,7 +475,7 @@ a {
 							<input type="checkbox" class="aui-well-check" name="checkbox1"
 								id="" checked="checked">
 						</div>
-						注册即代表已经阅读并同意 <a href="javascript:;">《众粤协议条款》</a>
+						注册即代表已经阅读并同意 <a href="javascript:;">《恋爱话术库协议条款》</a>
 					</div>
 					<div class="aui-code-btn">
 						<div onclick="register()"
