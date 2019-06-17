@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
 
 
+
 /**
  * 
 * @author 高国藩
@@ -14,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Service
 @Transactional
 public class WechatMenuInfoService {
-
     
     public ModelAndView appIndex() {
         ModelAndView modelAndView = new ModelAndView("uclubdoctor/话术首页");
@@ -53,6 +53,13 @@ public class WechatMenuInfoService {
 
     public ModelAndView appLock() {
         ModelAndView modelAndView = new ModelAndView("uclubdoctor/话术加锁");
+        return modelAndView;
+    }
+
+    public ModelAndView appPay(String openId, Integer infoId) {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/pay");
+        modelAndView.addObject("openId", openId);
+        modelAndView.addObject("info", infoId);
         return modelAndView;
     }
 

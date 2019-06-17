@@ -17,11 +17,9 @@
 	<%@include file="wechatBase.jsp"%>
 	<%@include file="dialog.jsp"%>
 	<script type="text/javascript">
-	var money = '${money}';
-	var goodsName = '${goodsName}';
-	var callBackPath = '${callBackPath}';
+	var info = '${info}';
 	var openId = '${openId}';
-	var wechatOrder = {"money":money, "goodsName":goodsName, "callBackPath":callBackPath, "openId":openId};
+	var wechatOrder = {"info":info, "openId":openId};
 	$(function () {
 		$.ajax({
 			  type : "POST",

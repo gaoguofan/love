@@ -40,7 +40,7 @@ public class WechatPaymentController {
     * @param requestBody
     * @return
      */
-    @RequestMapping(value = RouteConfig.AppPay.REQUEST_APP_PAY_JS_API, method=RequestMethod.POST)
+    @RequestMapping(value = "app/pay/js/api", method=RequestMethod.POST)
     @ResponseBody
     public BaseDto getNativeCode(HttpServletRequest request, HttpServletResponse response, @RequestBody JSONObject requestBody) {
         String outTradeNo = StringUtil.getKey(); 

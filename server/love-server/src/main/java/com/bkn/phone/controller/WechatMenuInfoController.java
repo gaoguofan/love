@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.bkn.browser.config.App;
+import com.bkn.browser.utils.StringUtil;
 import com.bkn.phone.service.WechatMenuInfoService;
 
 
@@ -133,6 +135,25 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     @RequestMapping(value = "app/lock", method = RequestMethod.GET) 
     public ModelAndView appLock(HttpServletRequest request, HttpServletResponse response) {
         return wechatMenuInfoService.appLock();
+    }
+    
+    
+    /**
+     * 进入支付网页{@link WechatPaymentController.getNativeCode()}
+    * @author 高国藩
+    * @date 2019年6月17日 下午8:25:57
+    * @param request
+    * @param response
+    * @return
+     */
+    @RequestMapping(value = "app/pay", method = RequestMethod.GET) 
+    public ModelAndView appPay(HttpServletRequest request, HttpServletResponse response, Integer infoId) {
+        String openId = getOpenId(request, response, App.Wechat.WECHAT_APP_ID_BKN);
+        if (StringUtil.isEmpty(openId)){
+            return null;
+        }
+        setJsapiSignData(request);
+        return wechatMenuInfoService.appPay(openId, infoId);
     }
     
 }
