@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bkn.browser.mybatis.LoveVipCoumerInfoMapper">
+  <resultMap id="BaseResultMap" type="com.bkn.system.entity.LoveVipCoumerInfo">
+    <id column="info_id" jdbcType="INTEGER" property="infoId" />
+    <result column="pack_age_id" jdbcType="INTEGER" property="packAgeId" />
+    <result column="pack_age_name" jdbcType="VARCHAR" property="packAgeName" />
+    <result column="pack_age_money" jdbcType="INTEGER" property="packAgeMoney" />
+    <result column="pack_age_old_money" jdbcType="INTEGER" property="packAgeOldMoney" />
+    <result column="is_recommend" jdbcType="BIT" property="isRecommend" />
+    <result column="update_time" jdbcType="CHAR" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    info_id, pack_age_id, pack_age_name, pack_age_money, pack_age_old_money, is_recommend, 
+    update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from love_vip_coumer_info
+    where info_id = #{infoId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from love_vip_coumer_info
+    where info_id = #{infoId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bkn.system.entity.LoveVipCoumerInfo">
+    insert into love_vip_coumer_info (info_id, pack_age_id, pack_age_name, 
+      pack_age_money, pack_age_old_money, is_recommend, 
+      update_time)
+    values (#{infoId,jdbcType=INTEGER}, #{packAgeId,jdbcType=INTEGER}, #{packAgeName,jdbcType=VARCHAR}, 
+      #{packAgeMoney,jdbcType=INTEGER}, #{packAgeOldMoney,jdbcType=INTEGER}, #{isRecommend,jdbcType=BIT}, 
+      #{updateTime,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bkn.system.entity.LoveVipCoumerInfo">
+    insert into love_vip_coumer_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="infoId != null">
+        info_id,
+      </if>
+      <if test="packAgeId != null">
+        pack_age_id,
+      </if>
+      <if test="packAgeName != null">
+        pack_age_name,
+      </if>
+      <if test="packAgeMoney != null">
+        pack_age_money,
+      </if>
+      <if test="packAgeOldMoney != null">
+        pack_age_old_money,
+      </if>
+      <if test="isRecommend != null">
+        is_recommend,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="infoId != null">
+        #{infoId,jdbcType=INTEGER},
+      </if>
+      <if test="packAgeId != null">
+        #{packAgeId,jdbcType=INTEGER},
+      </if>
+      <if test="packAgeName != null">
+        #{packAgeName,jdbcType=VARCHAR},
+      </if>
+      <if test="packAgeMoney != null">
+        #{packAgeMoney,jdbcType=INTEGER},
+      </if>
+      <if test="packAgeOldMoney != null">
+        #{packAgeOldMoney,jdbcType=INTEGER},
+      </if>
+      <if test="isRecommend != null">
+        #{isRecommend,jdbcType=BIT},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bkn.system.entity.LoveVipCoumerInfo">
+    update love_vip_coumer_info
+    <set>
+      <if test="packAgeId != null">
+        pack_age_id = #{packAgeId,jdbcType=INTEGER},
+      </if>
+      <if test="packAgeName != null">
+        pack_age_name = #{packAgeName,jdbcType=VARCHAR},
+      </if>
+      <if test="packAgeMoney != null">
+        pack_age_money = #{packAgeMoney,jdbcType=INTEGER},
+      </if>
+      <if test="packAgeOldMoney != null">
+        pack_age_old_money = #{packAgeOldMoney,jdbcType=INTEGER},
+      </if>
+      <if test="isRecommend != null">
+        is_recommend = #{isRecommend,jdbcType=BIT},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=CHAR},
+      </if>
+    </set>
+    where info_id = #{infoId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bkn.system.entity.LoveVipCoumerInfo">
+    update love_vip_coumer_info
+    set pack_age_id = #{packAgeId,jdbcType=INTEGER},
+      pack_age_name = #{packAgeName,jdbcType=VARCHAR},
+      pack_age_money = #{packAgeMoney,jdbcType=INTEGER},
+      pack_age_old_money = #{packAgeOldMoney,jdbcType=INTEGER},
+      is_recommend = #{isRecommend,jdbcType=BIT},
+      update_time = #{updateTime,jdbcType=CHAR}
+    where info_id = #{infoId,jdbcType=INTEGER}
+  </update>
+</mapper>

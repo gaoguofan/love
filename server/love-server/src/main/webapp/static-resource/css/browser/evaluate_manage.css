@@ -1,0 +1,205 @@
+.goods_imformation {
+	padding: 15px 20px;
+}
+
+.goods_imformation_content {
+	height: 690px;
+	border: 1px solid #dfdfdf;
+	border-radius: 12px;
+}
+
+.goods_imformation_content>p {
+	padding-left: 10px;
+	height: 30px;
+	line-height: 30px;
+	background: #e8e8e8;
+	border-radius: 12px 12px 0 0;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+.goods_imformation_content>p .add_btn {
+	cursor: pointer;
+	display: inline-block;
+	width: 100px;
+	border-right: 1px solid #c9c9c9;
+}
+
+.goods_imformation_content>p .add_btn em {
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	background: #72b39f;
+	color: white;
+	border-radius: 12px;
+}
+
+.goods {
+	display: inline-block;
+	margin-left: 12px
+}
+
+.goods input {
+	border-radius: 12px;
+	text-align: center;
+	width: 100px;
+	height: 22px;
+	position: relative;
+	top: -2px;
+	margin-left: 4px
+}
+
+.goods  select {
+	border-radius: 12px;
+	background: white;
+	width: 100px;
+	height: 22px;
+	position: relative;
+	top: -2px;
+	margin-left: 4px
+}
+
+.goods_imformation_search {
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	background: #1aa8f2;
+	color: white;
+	border-radius: 12px;
+	margin-left: 5px;
+	cursor: pointer
+}
+
+.goods_imformation_content table {
+	width: 100%;
+	font-size: 12px
+}
+
+.goods_imformation_content table td {
+	width: 120px;
+	text-align: center;
+	vertical-align: middle;
+	height: 30px;
+	border-right: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	position: relative
+}
+
+.goods_imformation_content table tr td:last-child {
+	border-right: none
+}
+
+.goods_imformation_content>table {
+	background: #fafafa;
+	font-size: 14px
+}
+
+.open {
+	color: #72b39f !important
+}
+
+.goods_imformation_content table td em {
+	position: absolute;
+	left: 2%;
+	width: 96%;
+	top: 7px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	height: 18px
+}
+
+.goods_imformation_content table td  span {
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 4px;
+	margin: 0 3px;
+}
+
+.goods_adjust {
+	background: #00a0e9
+}
+
+.goods_suspend {
+	background: #72b39f
+}
+
+.goods_delete {
+	background: #7d7d7d
+}
+
+.goods_imformation_table tr:nth-child(even) {
+	background: #fafafa
+}
+
+.goods_imformation_table {
+	height: 628px;
+	overflow: overlay
+}
+
+.goods_imformation_content table td img {
+	width: 100px;
+	height: 100px
+}
+
+.customer-number {
+	color: #de3636
+}
+
+.goods_imformation_content table td textarea {
+	padding: 2px;
+	width: 90%;
+	height: 80px;
+	border-radius: 12px;
+	resize: none;
+	background: #fbfbfb;
+	border: 1px solid #e7e4e4
+}
+
+.goods_imformation_content table tr p span {
+	display: inline-block;
+	padding: 1px 3px;
+	border-radius: 4px;
+	color: white;
+	cursor: pointer
+}
+
+.cancel {
+	background: #787878
+}
+
+.evaluate_manage_content {
+	height: 660px;
+	overflow: overlay
+}
+
+.tuwen {
+	background: #00b7ee
+}
+
+.goods_imformation_content table tr p {
+	margin: 10px 0
+}
+
+.evaluate_manage_content-1 ul li {
+	float: left;
+	margin: 10px
+}
+
+.evaluate_manage_content-1 ul li img {
+	width: 100px;
+	height: 100px
+}
+
+.evaluate_manage_content-1 ul {
+	background: #fbfbfb;
+	border-bottom: 1px solid #dbdbdb;
+	display: none
+}

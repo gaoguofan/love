@@ -1,0 +1,109 @@
+package com.bkn.phone.service;
+
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang.RandomStringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.bkn.browser.config.App;
+import com.bkn.browser.config.PageConfig;
+import com.bkn.browser.config.RouteConfig;
+import com.bkn.browser.mybatis.LoveUserInfoMapper;
+import com.bkn.browser.utils.AddressUtils;
+import com.bkn.browser.utils.DateUtil;
+import com.bkn.browser.utils.HttpClientUtil;
+import com.bkn.browser.utils.StringUtil;
+import com.bkn.system.dto.BaseDto;
+import com.bkn.system.entity.LoveUserInfo;
+import com.bkn.system.service.RedisService;
+import com.bkn.system.service.SmsService;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+/**
+ * 移动端用户个人版面
+* @author 高国藩
+* @date 2017年3月16日 下午8:38:53
+ */
+@Service
+@Transactional
+public class WechatUserPersonService {
+
+    @Autowired
+    private RedisService redisService;
+    
+    @Autowired
+    private SmsService smsService;
+    
+    @Autowired LoveUserInfoMapper loveUserInfoMapper;
+    
+    
+    /**
+     * 注册页面
+    * @author 高国藩
+    * @date 2019年1月21日 上午10:39:39
+    * @param openId
+    * @return
+     */
+    public ModelAndView viewUserLoginPage(String openId) {
+        LoveUserInfo selectByWechatId = loveUserInfoMapper.selectByWechatId(openId);
+        if (selectByWechatId != null) {
+            return new ModelAndView("redirect:/" + RouteConfig.WechatUser.WECHAT_USER_PERSON);
+        } else {
+            return new ModelAndView(PageConfig.Wechat.LOGIN);
+        }
+    }
+
+    
+    
+
+    /**
+     * 获取验证码
+    * @author 高国藩
+    * @date 2017年3月23日 下午3:31:47
+    * @param phone  phone
+    * @return       BaseDto
+     */
+    public BaseDto getVerifyCodeAction(String phone) {
+        String code = RandomStringUtils.randomNumeric(6);
+        redisService.set(App.Redis.PHONE_VERIFY_CODE_KEY_PRE + phone, code);
+        redisService.expire(App.Redis.PHONE_VERIFY_CODE_KEY_PRE + phone, 180);
+        if(smsService.sendCheckMsgAlibaMessage(phone, code)) {
+            return new BaseDto(App.System.API_RESULT_CODE_FOR_SUCCEES, "验证码发送成功");
+        }
+        return new BaseDto(App.System.API_RESULT_CODE_FOR_FAIL, "短信发送不成功");
+    }
+
+   
+    /**
+     * 提取中文汉字
+    * @author 高国藩
+    * @date 2017年4月20日 下午1:44:44
+    * @param paramValue 预提取中文汉字
+    * @return           提取结果
+     */
+    public static String getChinese(String paramValue) {
+        String regex = "([\u4e00-\u9fa5]+)";
+        String str = "";
+        Matcher matcher = Pattern.compile(regex).matcher(paramValue);
+        while (matcher.find()) {
+            str+= matcher.group(0);
+        }
+        return str;
+    }
+
+    
+}

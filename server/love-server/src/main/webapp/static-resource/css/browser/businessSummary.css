@@ -1,0 +1,148 @@
+.add_developer {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-radius: 12px;
+	margin-bottom: 10px;
+}
+
+.add_developer>p {
+	border-bottom: 1px solid #ccc;
+	height: 30px;
+	line-height: 26px;
+	background: #e8e8e8
+}
+
+.add_developer>p span em {
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	background: #898989;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 10px
+}
+
+.add_developer>p span .active {
+	background: #009fe5 !important
+}
+
+.add_developer>p span input, .add_developer>p span select {
+	margin-left: 6px;
+	margin-right: 6px;
+	padding: 0;
+	border: 1px solid #ccc;
+	border-radius: 12px;
+	width: 100px;
+	height: 20px
+}
+
+.add_developer>p span {
+	margin-right: 10px
+}
+
+.add_developer>p button {
+	cursor: pointer;
+	border: none;
+	color: #fff;
+	text-align: center;
+	border-radius: 12px;
+	height: 20px;
+	width: 80px;
+	background: #72b39f;
+	line-height: 20px
+}
+
+.add_developer ul li {
+	margin: 14px 5%;
+	float: left;
+	width: 230px;
+	height: 100px;
+	border-radius: 12px;
+	background: #72b39f;
+	color: #fff;
+	text-align: center;
+}
+
+.add_developer ul li>p:nth-child(1) {
+	font-size: 20px;
+	margin-top: 18px;
+}
+
+.add_developer ul li>p:nth-child(2) {
+	font-size: 16px
+}
+
+.add_developer ul li>span {
+	display: inline-block;
+	margin: 20px
+}
+
+.number_people {
+	font-size: 36px
+}
+
+.add_developer ul li .num {
+	font-size: 16px;
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px
+}
+
+.add_developer ul li>div {
+	font-size: 16px;
+	margin: 16px 0 0 20px
+}
+
+.add_developer ul li>div span {
+	display: inline-block;
+	width: 73px
+}
+
+table {
+	width: 100%
+}
+
+table tr:nth-child(1) {
+	font-weight: 400
+}
+
+table td {
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	width: 100px;
+	text-align: center;
+	height: 35px;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+table td:last-child {
+	border-right: none
+}
+
+.add_developer_table {
+	border-top: 1px solid #ccc
+}
+
+.add_developer_table>table {
+	font-size: 14px;
+	background: #f9f9f9
+}
+
+.add_developer_table_1 table tr:nth-child(even) {
+	background: #f6f8fc
+}
+
+.add_developer_table_1 {
+	height: 220px;
+	overflow: overlay
+}
+
+.add_developer_top {
+	font-size: 14px;
+	font-weight: bolder;
+	padding: 5 0 0 10;
+}

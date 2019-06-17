@@ -1,0 +1,157 @@
+.pay_price>p {
+	font-size: 16px;
+	color: black
+}
+
+.pay_price_num {
+	height: 580px;
+	border-radius: 12px;
+	border: 1px solid #ccc;
+	padding: 0 25px;
+	background: #fafafa
+}
+
+.pay_price_content>p {
+	font-size: 14px;
+	margin: 22px 0;
+	color: black
+}
+
+.pay_price_content li {
+	width: 180px;
+	height: 50px;
+	float: left;
+	margin-left: 40px
+}
+
+.pay_price_content li span {
+	display: inline-block;
+	width: 130px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 12px;
+	border: 1px solid #ccc;
+	margin-left: 16px;
+	cursor: pointer;
+	background: white
+}
+
+.pay_price_content ul {
+	width: 920px;
+	height: 100px
+}
+
+input[type=radio] {
+	position: relative;
+	top: -4px
+}
+
+.pay_price_content li input[type='text'] {
+	width: 120px;
+	height: 20px;
+	border-radius: 12px;
+	margin-left: 10px;
+	border: 1px solid #ccc;
+	text-align: center
+}
+
+.pay_way p {
+	color: black;
+	font-size: 14px;
+	margin-bottom: 20px
+}
+
+.pay_animate li {
+	width: 242px;
+	height: 40px;
+	border: 1px solid #ccc;
+	color: black;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: center;
+	background: white
+}
+
+.pay_animate img {
+	vertical-align: middle
+}
+
+.pay_animate ul {
+	height: 84px;
+	width: 244px;
+	float: left;
+	margin-left: 20px
+}
+
+.pay_way {
+	height: 360px
+}
+
+.payfor {
+	float: left;
+	color: black;
+	font-size: 14px;
+	margin-left: 36px
+}
+
+.payfor span {
+	color: red;
+	font-size: 18px;
+	margin: 0 2px
+}
+
+.pay_sure {
+	width: 100px;
+	height: 22px;
+	text-align: center;
+	border: none;
+	border-radius: 12px;
+	color: white;
+	background: #72b39f;
+	line-height: 22px;
+	cursor: pointer;
+	float: right
+}
+
+.webchat_ {
+	position: absolute;
+	width: 233px;
+	height: 238px;
+	background: url(http://qiniu.jobwisdom.cn/system/images/pay_back.png)
+		no-repeat;
+	top: 10px;
+	left: 7px;
+	display: none
+}
+
+.webchat_ span {
+	padding: 8px;
+	display: inline-block;
+	border: 1px dashed #858484;
+	border-radius: 8px;
+	position: relative;
+	top: 28px
+}
+
+.webchat_ span img {
+	width: 150px
+}
+
+.recharge {
+	padding: 15px 20px;
+}
+
+.webchat_ em {
+	cursor: pointer
+}
+
+.message_rest {
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	padding: 5px 0
+}
+
+.message_rest span {
+	color: #d83838;
+}

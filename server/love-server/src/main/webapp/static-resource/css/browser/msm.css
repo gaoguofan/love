@@ -1,0 +1,87 @@
+.message_send {
+	padding: 15px 20px
+}
+
+.message_send_content {
+	height: 692px;
+	border: 1px solid #dfdfdf;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.message_send_content>p {
+	padding-left: 10px;
+	height: 30px;
+	line-height: 30px;
+	background: #e8e8e8;
+	border-radius: 12px 12px 0 0;
+	border-bottom: 1px solid #dfdfdf
+}
+
+.message_send_content>p input {
+	margin-right: 10px;
+	position: relative;
+	top: -2px;
+	border-radius: 12px;
+	text-align: center;
+	width: 100px;
+	height: 24px;
+	margin-left: 10px
+}
+
+.message_send_content>p .search {
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	background: #1aa8f2;
+	color: #fff;
+	border-radius: 12px;
+	cursor: pointer
+}
+
+.message_send_content table {
+	width: 100%
+}
+
+.message_send_content table td {
+	position: relative;
+	font-size: 12px;
+	height: 30px;
+	vertical-align: middle;
+	width: 120px;
+	text-align: center;
+	border-right: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb
+}
+
+.message_send_content table tr td:last-child {
+	border-right: none
+}
+
+.message_send_content>table td {
+	background: #fafafa;
+	font-size: 14px
+}
+
+.message_send_content_table table tr:nth-child(even) {
+	background: #fafafa
+}
+
+.message_send_content_table {
+	height: 631px;
+	overflow-y: auto
+}
+
+.message_send_content table td span {
+	position: absolute;
+	left: 2%;
+	width: 96%;
+	top: 7px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	height: 18px
+}

@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* Reset css*/
+body, h1, h2, h3, h4, h5, h6, div, hr, p, blockquote, dl, dt, dd, ul, ol,
+	li, pre, form, fieldset, legend, button, input, textarea, th, td {
+	margin: 0;
+	padding: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%
+}
+
+address, cite, dfn, em, var {
+	font-style: normal
+}
+
+code, kbd, pre, samp {
+	font-family: courier new, courier, monospace
+}
+
+small {
+	font-size: 12px
+}
+
+ul, ol, li, dl, dt, dd {
+	list-style: none
+}
+
+sup {
+	vertical-align: text-top
+}
+
+sub {
+	vertical-align: text-bottom
+}
+
+legend {
+	color: #000
+}
+
+fieldset, img {
+	border: 0
+}
+
+body {
+	font-family: 'Microsoft Yahei', Arial, Helvetica, sans-serif;
+	font-size: 0.6rem
+}
+
+button, input, select, textarea {
+	vertical-align: middle;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+.clear {
+	display: block;
+	float: none;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	background: none;
+	border: 0;
+	font-size: 0
+}
+
+button:focus {
+	border: none
+}
+/*a*/
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	color: white;
+}
+
+/*title*/
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 14px;
+}
+
+h5 {
+	font-size: 12px;
+}
+
+h6 {
+	font-size: 9px;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}

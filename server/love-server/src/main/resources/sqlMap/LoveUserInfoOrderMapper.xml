@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bkn.browser.mybatis.LoveUserInfoOrderMapper">
+  <resultMap id="BaseResultMap" type="com.bkn.system.entity.LoveUserInfoOrder">
+    <id column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="pay_sign" jdbcType="INTEGER" property="paySign" />
+    <result column="pay_category" jdbcType="INTEGER" property="payCategory" />
+    <result column="pay_money" jdbcType="INTEGER" property="payMoney" />
+    <result column="out_trade_no" jdbcType="VARCHAR" property="outTradeNo" />
+    <result column="sign_no" jdbcType="VARCHAR" property="signNo" />
+    <result column="create_time" jdbcType="CHAR" property="createTime" />
+    <result column="finish_time" jdbcType="CHAR" property="finishTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    order_id, user_id, pay_sign, pay_category, pay_money, out_trade_no, sign_no, create_time, 
+    finish_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from love_user_info_order
+    where order_id = #{orderId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from love_user_info_order
+    where order_id = #{orderId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bkn.system.entity.LoveUserInfoOrder">
+    insert into love_user_info_order (order_id, user_id, pay_sign, 
+      pay_category, pay_money, out_trade_no, 
+      sign_no, create_time, finish_time
+      )
+    values (#{orderId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{paySign,jdbcType=INTEGER}, 
+      #{payCategory,jdbcType=INTEGER}, #{payMoney,jdbcType=INTEGER}, #{outTradeNo,jdbcType=VARCHAR}, 
+      #{signNo,jdbcType=VARCHAR}, #{createTime,jdbcType=CHAR}, #{finishTime,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.bkn.system.entity.LoveUserInfoOrder" keyProperty="orderId" useGeneratedKeys="true">
+    insert into love_user_info_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="paySign != null">
+        pay_sign,
+      </if>
+      <if test="payCategory != null">
+        pay_category,
+      </if>
+      <if test="payMoney != null">
+        pay_money,
+      </if>
+      <if test="outTradeNo != null">
+        out_trade_no,
+      </if>
+      <if test="signNo != null">
+        sign_no,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="finishTime != null">
+        finish_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="paySign != null">
+        #{paySign,jdbcType=INTEGER},
+      </if>
+      <if test="payCategory != null">
+        #{payCategory,jdbcType=INTEGER},
+      </if>
+      <if test="payMoney != null">
+        #{payMoney,jdbcType=INTEGER},
+      </if>
+      <if test="outTradeNo != null">
+        #{outTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="signNo != null">
+        #{signNo,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=CHAR},
+      </if>
+      <if test="finishTime != null">
+        #{finishTime,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bkn.system.entity.LoveUserInfoOrder">
+    update love_user_info_order
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="paySign != null">
+        pay_sign = #{paySign,jdbcType=INTEGER},
+      </if>
+      <if test="payCategory != null">
+        pay_category = #{payCategory,jdbcType=INTEGER},
+      </if>
+      <if test="payMoney != null">
+        pay_money = #{payMoney,jdbcType=INTEGER},
+      </if>
+      <if test="outTradeNo != null">
+        out_trade_no = #{outTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="signNo != null">
+        sign_no = #{signNo,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=CHAR},
+      </if>
+      <if test="finishTime != null">
+        finish_time = #{finishTime,jdbcType=CHAR},
+      </if>
+    </set>
+    where order_id = #{orderId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bkn.system.entity.LoveUserInfoOrder">
+    update love_user_info_order
+    set user_id = #{userId,jdbcType=INTEGER},
+      pay_sign = #{paySign,jdbcType=INTEGER},
+      pay_category = #{payCategory,jdbcType=INTEGER},
+      pay_money = #{payMoney,jdbcType=INTEGER},
+      out_trade_no = #{outTradeNo,jdbcType=VARCHAR},
+      sign_no = #{signNo,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=CHAR},
+      finish_time = #{finishTime,jdbcType=CHAR}
+    where order_id = #{orderId,jdbcType=INTEGER}
+  </update>
+</mapper>

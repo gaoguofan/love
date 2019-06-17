@@ -1,0 +1,198 @@
+.manage_set {
+	height: 690px;
+	border: 1px solid #dfdfdf;
+	border-radius: 12px
+}
+
+.manage_set>p {
+	padding-left: 10px;
+	height: 30px;
+	line-height: 30px;
+	background: #e8e8e8;
+	border-radius: 12px 12px 0 0;
+	border-bottom: 1px solid #dfdfdf
+}
+
+.manage_set>p .add_btn em {
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	background: #72b39f;
+	color: white;
+	border-radius: 12px
+}
+
+.manage_set>p .add_btn {
+	cursor: pointer;
+	display: inline-block;
+	width: 100px;
+	border-right: 1px solid #c9c9c9
+}
+
+.manage_set>p input {
+	margin-right: 10px;
+	position: relative;
+	top: -2px;
+	border-radius: 12px;
+	text-align: center;
+	width: 200px;
+	height: 24px;
+	margin-left: 10px
+}
+
+.manage_set .search {
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	background: #1aa8f2;
+	color: white;
+	border-radius: 12px;
+	cursor: pointer
+}
+
+.manage_set table {
+	width: 100%;
+}
+
+.manage_set table td {
+	height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	width: 120px;
+	border-right: 1px solid #c9c9c9;
+	border-bottom: 1px solid #c9c9c9
+}
+
+.manage_set table tr td:last-child {
+	border-right: none
+}
+
+.manage_set>table {
+	background: #fafafa;
+	font-size: 14px;
+}
+
+.manage_set_table table {
+	font-size: 12px
+}
+
+.manage_set_table table td span {
+	width: 65px;
+	margin: 0 10px;
+	display: inline-block;
+	height: 20px;
+	border-radius: 4px;
+	text-align: center;
+	color: white;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.manage_set_pass {
+	background: #eb5c15
+}
+
+.manage_set_adjust {
+	background: #15a8eb
+}
+
+.manage_set_delete {
+	background: #7d7d7d
+}
+
+.manage_set_table table tr:nth-child(even) {
+	background: #fafafa
+}
+
+.manage_set_table {
+	height: 628px;
+	overflow: overlay
+}
+
+.zzc {
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2
+}
+
+.new_manage {
+	width: 300px;
+	height: 220px;
+	background: #fafafa;
+	border-radius: 12px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: -110px;
+	margin-left: -150px;
+}
+
+.new_manage>p {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #72b39f;
+	color: white;
+	border-radius: 12px 12px 0 0;
+	font-size: 14px
+}
+
+.new_manage_content {
+	margin-top: 10px;
+	border-top: 1px solid #dddddd;
+	padding: 15px 30px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.new_manage_content p {
+	margin-bottom: 18px
+}
+
+.new_manage_content p span {
+	display: inline-block;
+	width: 85px
+}
+
+.new_manage_content p em {
+	color: #ef1a1a;
+	position: relative;
+	top: 2px;
+	left: 4px
+}
+
+.new_manage_content p select {
+	border-radius: 12px;
+	background: white;
+	width: 140px;
+	height: 20px;
+	border: none
+}
+
+.new_manage_content p  input {
+	border-radius: 12px;
+	background: white;
+	height: 20px;
+	text-align: center;
+	width: 140px;
+	border: none
+}
+
+.new_manage_content p:last-child {
+	margin-bottom: 0
+}
+
+.base_set_button {
+	margin-top: 14px;
+}
+
+.base_set_button button {
+	margin: 0 20px
+}

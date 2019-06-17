@@ -1,0 +1,268 @@
+.goods_imformation {
+	padding: 15px 20px
+}
+
+.goods_imformation_content {
+	height: 692px;
+	border: 1px solid #dfdfdf;
+	border-radius: 12px
+}
+
+.goods_imformation_content>p {
+	padding-left: 10px;
+	height: 30px;
+	line-height: 30px;
+	background: #e8e8e8;
+	border-radius: 12px 12px 0 0;
+	border-bottom: 1px solid #dfdfdf
+}
+
+.goods_imformation_content>p .add_btn {
+	cursor: pointer;
+	display: inline-block;
+	width: 100px;
+	border-right: 1px solid #c9c9c9
+}
+
+.goods_imformation_content>p .add_btn em {
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	background: #72b39f;
+	color: #fff;
+	border-radius: 12px
+}
+
+.goods {
+	display: inline-block;
+	margin-left: 12px
+}
+
+.goods input {
+	border-radius: 12px;
+	text-align: center;
+	width: 100px;
+	height: 22px;
+	position: relative;
+	top: -2px;
+	margin-left: 4px
+}
+
+.goods select {
+	border-radius: 12px;
+	background: #fff;
+	width: 100px;
+	height: 22px;
+	position: relative;
+	top: -2px;
+	margin-left: 4px
+}
+
+.goods_imformation_search {
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	background: #1aa8f2;
+	color: #fff;
+	border-radius: 12px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.goods_imformation_content table {
+	width: 100%;
+	font-size: 12px
+}
+
+.goods_imformation_content table td {
+	width: 5%;
+	text-align: center;
+	vertical-align: middle;
+	height: 30px;
+	border-right: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	position: relative
+}
+
+.goods_imformation_content table tr td:last-child {
+	border-right: none
+}
+
+.goods_imformation_content>table {
+	background: #fafafa;
+	font-size: 14px
+}
+
+.open {
+	color: #72b39f !important
+}
+
+.goods_imformation_content table td em {
+	position: absolute;
+	left: 2%;
+	width: 96%;
+	top: 7px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	height: 18px
+}
+
+.goods_imformation_content table td span {
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 4px;
+	color: #fff;
+	margin: 0 3px;
+	cursor: pointer
+}
+
+.goods_adjust {
+	background: #00a0e9
+}
+
+.goods_suspend {
+	background: #72b39f
+}
+
+.goods_enable {
+	background: green
+}
+
+.goods_delete {
+	background: #7d7d7d
+}
+
+.goods_imformation_table tr:nth-child(even) {
+	background: #fafafa
+}
+
+.goods_imformation_table tr {
+	font-weight: normal !important;
+}
+
+.goods_imformation_table {
+	height: 631px;
+	overflow: overlay
+}
+
+.zzc {
+	background: rgba(0, 0, 0, .5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: none
+}
+
+.zzc_goods {
+	width: 400px;
+	height: 380px;
+	background: #f9f9f9;
+	border-radius: 12px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -160px
+}
+
+.zzc_goods>p {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #72b39f;
+	color: #fff;
+	border-radius: 12px 12px 0 0;
+	font-size: 14px
+}
+
+.zzc_goods_content {
+	margin-top: 10px;
+	border-top: 1px solid #ddd;
+	padding: 15px 30px;
+	border-bottom: 1px solid #ddd
+}
+
+.zzc_goods_content p {
+	margin-right: -60px;
+	margin-bottom: 12px
+}
+
+.zzc_goods_content input {
+	width: 120px;
+	border-radius: 12px;
+	height: 20px;
+	border: none;
+	margin-left: 4px
+}
+
+.zzc_goods_content>p>span {
+	margin-right: 30px;
+	display: inline-block;
+}
+
+.zzc_goods_content p em {
+	display: inline-block;
+	width: 75px
+}
+
+.zzc_goods_content p select {
+	width: 100px;
+	border-radius: 12px;
+	height: 20px;
+	border: none;
+	margin-left: 4px
+}
+
+.beiz_left {
+	float: left;
+	width: 50px
+}
+
+.beiz_right {
+	float: left
+}
+
+.beiz_right textarea {
+	resize: none;
+	border: none;
+	background: #fff;
+	width: 290px;
+	height: 60px;
+	border-radius: 12px;
+	padding: 5px
+}
+
+.base_set_button {
+	margin-top: 10px
+}
+
+.base_set_button button {
+	margin: 0 25px
+}
+
+.tz_open {
+	color: #000 !important
+}
+
+.img_upload>div {
+	display: inline-block;
+	width: 45%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.img_upload>div>img {
+	margin-top: 10px;
+}

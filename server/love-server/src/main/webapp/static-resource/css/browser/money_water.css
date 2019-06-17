@@ -1,0 +1,130 @@
+.content_right {
+	padding: 20px 16px
+}
+
+.money_water {
+	color: black;
+	height: 840px;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 1px solid #d6d8da
+}
+
+.rightpanel {
+	background: white
+}
+
+.money_water_header {
+	height: 42px;
+	background: #e8e8e8;
+	padding: 0 20px;
+	line-height: 42px
+}
+
+.money_water_header>span {
+	line-height: 20px;
+	margin-right: 10px;
+	display: inline-block;
+	width: 60px;
+	height: 20px;
+	border-right: 1px solid #a6a6a6
+}
+
+.money_water_header select {
+	margin-left: 10px;
+	border-radius: 12px;
+	padding: 0 0 0 30px;
+	width: 130px
+}
+
+.money_water_header .money_water_header_right {
+	margin-top: 2px;
+	float: right;
+	width: 80px
+}
+
+.money_water_header em img {
+	margin-left: 20px
+}
+
+.printer {
+	float: left;
+	margin-right: 10px;
+	line-height: 16px;
+	text-align: center
+}
+
+.outport {
+	float: left;
+	line-height: 16px;
+	text-align: center
+}
+
+.money_water_table table {
+	width: 100%
+}
+
+.money_water_table table td {
+	width: 90px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	font-size: 12px
+}
+
+.money_water_table>table {
+	background: #ebeff8;
+	font-size: 14px
+}
+
+table tr:nth-child(1) {
+	font-weight: normal !important
+}
+
+.money_water_table table td:last-child {
+	border-right: none
+}
+
+.money_water_table table tr:nth-child(even) {
+	background: #fafafa
+}
+
+.bue {
+	color: #dd1f1f
+}
+
+.Balance {
+	color: #039400
+}
+
+.money_water_table_1 {
+	height: 768px;
+	overflow: overlay
+}
+
+.money_water_table_2 td {
+	background: #b8c7ea;
+	border-right: 1px solid #a6a6a6 !important
+}
+
+.money_water_header button {
+	width: 80px;
+	height: 24px;
+	border: none;
+	border-radius: 12px;
+	text-align: center;
+	line-height: 24px;
+	color: white;
+	background: #1aa8f2;
+	cursor: pointer
+}
+
+.money_water_header input {
+	width: 90px;
+	height: 14px;
+	border-radius: 12px;
+	border: 1px solid #aaaaaa;
+	margin: 0 5px;
+}
