@@ -36,4 +36,24 @@ public class WechatMenuInfoService {
         return modelAndView;
     }
 
+    public ModelAndView appMvp() {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/升级会员");
+        return modelAndView;
+    }
+
+    public ModelAndView appOrder() {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/我的订单");
+        return modelAndView;
+    }
+
+    public ModelAndView appDesc() {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/单条明细");
+        return modelAndView;
+    }
+
+    public ModelAndView appLock() {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/话术加锁");
+        return modelAndView;
+    }
+
 }

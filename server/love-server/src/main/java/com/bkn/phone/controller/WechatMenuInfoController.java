@@ -79,4 +79,60 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
         return wechatMenuInfoService.appUser();
     }
     
+    
+    /**
+     * 升级会员
+    * @author 高国藩
+    * @date 2019年6月17日 下午6:07:32
+    * @param request
+    * @param response
+    * @return
+     */
+    @RequestMapping(value = "app/mvp", method = RequestMethod.GET) 
+    public ModelAndView appMvp(HttpServletRequest request, HttpServletResponse response) {
+        return wechatMenuInfoService.appMvp();
+    }
+    
+    
+    /**
+     * 我的订单
+    * @author 高国藩
+    * @date 2019年6月17日 下午6:12:06
+    * @param request
+    * @param response
+    * @return
+     */
+    @RequestMapping(value = "app/order", method = RequestMethod.GET) 
+    public ModelAndView appOrder(HttpServletRequest request, HttpServletResponse response) {
+        return wechatMenuInfoService.appOrder();
+    }
+    
+    
+    /**
+     * 单条明细
+    * @author 高国藩
+    * @date 2019年6月17日 下午7:47:36
+    * @param request
+    * @param response
+    * @return
+     */
+    @RequestMapping(value = "app/desc", method = RequestMethod.GET) 
+    public ModelAndView appDesc(HttpServletRequest request, HttpServletResponse response) {
+        return wechatMenuInfoService.appDesc();
+    }
+    
+    
+    /**
+     * 话术加锁
+    * @author 高国藩
+    * @date 2019年6月17日 下午7:48:23
+    * @param request
+    * @param response
+    * @return
+     */
+    @RequestMapping(value = "app/lock", method = RequestMethod.GET) 
+    public ModelAndView appLock(HttpServletRequest request, HttpServletResponse response) {
+        return wechatMenuInfoService.appLock();
+    }
+    
 }
