@@ -1,9 +1,17 @@
 package com.bkn.phone.service;
 
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.bkn.browser.mybatis.LoveArticleInfoMapper;
+import com.bkn.browser.mybatis.LoveCategoryInfoMapper;
+import com.bkn.system.entity.LoveArticleInfo;
+import com.bkn.system.entity.LoveCategoryInfo;
 
 
 
@@ -16,15 +24,38 @@ import org.springframework.web.servlet.ModelAndView;
 @Transactional
 public class WechatMenuInfoService {
     
+    @Autowired LoveCategoryInfoMapper loveCategoryInfoMapper;
+    @Autowired LoveArticleInfoMapper loveArticleInfoMapper;
+    
     public ModelAndView appIndex() {
         ModelAndView modelAndView = new ModelAndView("uclubdoctor/话术首页");
+        List<LoveCategoryInfo> loveCategoryInfos = loveCategoryInfoMapper.selectAll();
+        modelAndView.addObject("loveCategoryInfos", loveCategoryInfos);
         return modelAndView;
     }
 
     public ModelAndView appArticle() {
         ModelAndView modelAndView = new ModelAndView("uclubdoctor/文章列表");
+        List<LoveArticleInfo> loveArticleInfos = loveArticleInfoMapper.selectAll();
+        modelAndView.addObject("loveArticleInfos", loveArticleInfos);
         return modelAndView;
     }
+    
+    
+    /**
+     * 文章详情信息
+    * @author 高国藩
+    * @date 2019年6月24日 下午3:31:43
+    * @param id
+    * @return
+     */
+    public ModelAndView appArticleInfo(Integer id) {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/文章详情");
+        LoveArticleInfo loveArticleInfos =  loveArticleInfoMapper.selectByPrimaryKey(id);
+        modelAndView.addObject("loveArticleInfos", loveArticleInfos);
+        return modelAndView;
+    }
+    
 
     public ModelAndView appClass() {
         ModelAndView modelAndView = new ModelAndView("uclubdoctor/课程中心");

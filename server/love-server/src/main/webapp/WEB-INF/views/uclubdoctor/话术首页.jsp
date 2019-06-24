@@ -84,94 +84,18 @@
 <div class="mainboxbg"></div>
 <div class="mainbox">
 <!--header-->
-<div class="H-channel-title H-flexbox-horizontal H-theme-background-color-white H-vertical-middle H-border-vertical-bottom-after" style="background:#f8f8f8;">
-        <div class="H-channel-text H-theme-font-color10 H-flex-item H-font-size-15 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1" style="padding:6px 10px;">撩妹恋爱话术</div>
-    </div>
-<div style="padding-left:3%;background:#fff;">
-
-	<a href="./话术搜索.html" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">搭讪开场白</button>
-	</a>
-
-</div>
-	<div class="H-padding-vertical-bottom-10"></div><div class="H-channel-title H-flexbox-horizontal H-theme-background-color-white H-vertical-middle H-border-vertical-bottom-after" style="background:#f8f8f8;">
-        <div class="H-channel-text H-theme-font-color10 H-flex-item H-font-size-15 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1" style="padding:6px 10px;">撩妹恋爱惯例</div>
-    </div>
-<div style="padding-left:3%;background:#fff;">
-	<a href="/a/lmgl/yansexingzuoshouxiang/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">颜色星座手相</button>
-	</a>
-
-</div>
-	<div class="H-padding-vertical-bottom-10"></div><div class="H-channel-title H-flexbox-horizontal H-theme-background-color-white H-vertical-middle H-border-vertical-bottom-after" style="background:#f8f8f8;">
-        <div class="H-channel-text H-theme-font-color10 H-flex-item H-font-size-15 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1" style="padding:6px 10px;">短期关系--速约话术</div>
-    </div>
-<div style="padding-left:3%;background:#fff;">
-
-
-	<a href="/a/syhs/quweidashan/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">趣味搭讪</button>
-	</a>
-
-</div>
-	<div class="H-padding-vertical-bottom-10"></div><div class="H-channel-title H-flexbox-horizontal H-theme-background-color-white H-vertical-middle H-border-vertical-bottom-after" style="background:#f8f8f8;">
-        <div class="H-channel-text H-theme-font-color10 H-flex-item H-font-size-15 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1" style="padding:6px 10px;">长期关系--连环惯例</div>
-    </div>
-<div style="padding-left:3%;background:#fff;">
-
-	<a href="/a/lhgl/yuehuitaolu/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">约会套路</button>
-	</a>
-
-	<a href="/a/lhgl/zhengfanlingdu/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">正反冷读</button>
-	</a>
-
-</div>
-	<div class="H-padding-vertical-bottom-10"></div><div class="H-channel-title H-flexbox-horizontal H-theme-background-color-white H-vertical-middle H-border-vertical-bottom-after" style="background:#f8f8f8;">
-        <div class="H-channel-text H-theme-font-color10 H-flex-item H-font-size-15 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1" style="padding:6px 10px;">柔性恋爱疗法</div>
-    </div>
-<div style="padding-left:3%;background:#fff;">
-
-
-	<a href="/a/rxla/youxiyuxianjing/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">游戏与陷阱</button>
-	</a>
-
-</div>
-	<div class="H-padding-vertical-bottom-10"></div><div class="H-channel-title H-flexbox-horizontal H-theme-background-color-white H-vertical-middle H-border-vertical-bottom-after" style="background:#f8f8f8;">
-        <div class="H-channel-text H-theme-font-color10 H-flex-item H-font-size-15 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1" style="padding:6px 10px;">撩妹极限聊天术</div>
-    </div>
-<div style="padding-left:3%;background:#fff;">
-
-
-	<a href="/a/jxlt/feiwuceshi/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">废物测试</button>
-	</a>
-
-	<a href="/a/jxlt/qingganlianjie/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">情感链接</button>
-	</a>
-
-	<a href="/a/jxlt/jiazhixingliaotian/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">价值型聊天</button>
-	</a>
-
-	<a href="/a/jxlt/qingganbodong/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">情感波动</button>
-	</a>
-
-</div>
-	<div class="H-padding-vertical-bottom-10"></div><div class="H-channel-title H-flexbox-horizontal H-theme-background-color-white H-vertical-middle H-border-vertical-bottom-after" style="background:#f8f8f8;">
-        <div class="H-channel-text H-theme-font-color10 H-flex-item H-font-size-15 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1" style="padding:6px 10px;">情话</div>
-    </div>
-<div style="padding-left:3%;background:#fff;">
-
-	<a href="/a/qinghua/chaohuotuweiqinghua/" style="text-decoration:none;">
-		<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">超火土味情话</button>
-	</a>
-
-</div>
+	<c:forEach items="${loveCategoryInfos }" var="loveCategoryInfo">
+		<div class="H-channel-title H-flexbox-horizontal H-theme-background-color-white H-vertical-middle H-border-vertical-bottom-after" style="background:#f8f8f8;">
+	        <div class="H-channel-text H-theme-font-color10 H-flex-item H-font-size-15 H-theme-font-color-black H-padding-10 H-margin-horizontal-right-10 H-text-show-row-1" style="padding:6px 10px;">${loveCategoryInfo.infoText }</div>
+	    </div>
+		<div style="padding-left:3%;background:#fff;">
+			<c:forEach items="${loveCategoryInfo.loveCategoryInfos }" var="children">
+				<a href="<%=basePath %>app/query/key?key=${children.infoText }" style="text-decoration:none;">
+					<button class="H-button H-font-size-14 H-outline-none H-theme-background-color-transparent H-padding-vertical-both-8 H-padding-horizontal-both-20 H-theme-font-color3 H-theme-border-color3 H-theme-border-color3-click H-theme-background-color3-click H-theme-font-color3-click H-border-radius-3" style="padding:2px 10px;">${children.infoText }</button>
+				</a>
+			</c:forEach>
+		</div>
+	</c:forEach>
 	<div class="H-padding-vertical-bottom-10"></div>
 <div style="width:100%;height:55px;">
 </div>

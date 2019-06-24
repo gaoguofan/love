@@ -55,6 +55,20 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     
     /**
+     * 查询文章详情信息
+    * @author 高国藩
+    * @date 2019年6月24日 下午3:30:31
+    * @param request
+    * @param response
+    * @param id
+    * @return
+     */
+    @RequestMapping(value = "app/article/info", method = RequestMethod.GET) 
+    public ModelAndView appArticleInfo(HttpServletRequest request, HttpServletResponse response, Integer id) {
+        return wechatMenuInfoService.appArticleInfo(id);
+    }
+    
+    /**
      * 前往课程中心
     * @author 高国藩
     * @date 2019年6月17日 下午5:53:06

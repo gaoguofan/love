@@ -55,20 +55,15 @@
 <div class="jtbj" id="jtbj2"></div>
 </div>
   <div id="lttwList" style="display: block;">
-	<div class="H-flexbox-horizontal H-theme-background-color-white H-border-vertical-bottom-after" >
-        <div class="H-padding-vertical-both-10" style="width: 25%;float: left;"><a href="/a/hssz/sy/325.html" style="text-decoration:none;"><img src="/uploads/allimg/180526/1_0526034J34A4.jpg" class="H-display-block H-margin-horizontal-left-10" style="width: 70px; height: 70px;"/></a></div>
-        <div class="H-flex-item H-padding-10">
-            <strong class="H-font-weight-normal font-weight-500 H-font-size-16 H-display-block"><a href="/a/hssz/sy/325.html" style="color:#000;text-decoration:none;">535期：与20岁的单生美女聊天，超</a></strong>
-            <div class="H-font-size-14 H-theme-font-color-999 H-text-show-row-2 H-margin-vertical-top-2"><a href="/a/hssz/sy/325.html" style="color:#999;text-decoration:none;">此截图为未讲解标注版本，如需查看标注版了解为何这样聊天的原理，以及如何像案例中这样搜索话术聊天，可以微信添加导师微信领取与咨询.....</a></div>
-        </div>
-    </div>
-	<div class="H-flexbox-horizontal H-theme-background-color-white H-border-vertical-bottom-after">
-        <div class="H-padding-vertical-both-10" style="width: 25%;float: left;"><a href="/plus/view.php?aid=318" style="text-decoration:none;"><img src="/uploads/allimg/180526/1_0526034J34A4.jpg" class="H-display-block H-margin-horizontal-left-10" style="width: 70px; height: 70px;"/></a></div>
-        <div class="H-flex-item H-padding-10">
-            <strong class="H-font-weight-normal font-weight-500 H-font-size-16 H-display-block"><a href="/plus/view.php?aid=318" style="color:#000;text-decoration:none;">320期：与酒吧里眼睛超大超美超可</a></strong>
-            <div class="H-font-size-14 H-theme-font-color-999 H-text-show-row-2 H-margin-vertical-top-2"><a href="/plus/view.php?aid=318" style="color:#999;text-decoration:none;">此截图为未讲解标注版本，如需查看标注版了解为何这样聊天的原理，以及如何像案例中这样搜索话术聊天，可以微信添加导师微信领取与咨询.....</a></div>
-        </div>
-    </div>
+  	<c:forEach items="${loveArticleInfos }" var="loveArticleInfo">
+		<div class="H-flexbox-horizontal H-theme-background-color-white H-border-vertical-bottom-after" >
+	        <div class="H-padding-vertical-both-10" style="width: 25%;float: left;"><a href="/a/hssz/sy/325.html" style="text-decoration:none;"><img src="${loveArticleInfo.shutImagePath }" class="H-display-block H-margin-horizontal-left-10" style="width: 70px; height: 70px;"/></a></div>
+	        <div class="H-flex-item H-padding-10">
+	            <strong class="H-font-weight-normal font-weight-500 H-font-size-16 H-display-block"><a href="/a/hssz/sy/325.html" style="color:#000;text-decoration:none;">535期：与20岁的单生美女聊天，超</a></strong>
+	            <div class="H-font-size-14 H-theme-font-color-999 H-text-show-row-2 H-margin-vertical-top-2"><a href="<%=basePath %>app/article/info?id=${loveArticleInfo.id}" style="color:#999;text-decoration:none;">${loveArticleInfo.shutText }</a></div>
+	        </div>
+	    </div>
+    </c:forEach>
   <div style="font: 0px/0px sans-serif;clear: both;display: block"> </div>
   </div>
 <div style="width:100%;height:55px;">
