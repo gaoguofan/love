@@ -27,12 +27,12 @@
         <span tapmode="" onclick="H.closeWin();" class="H-icon H-position-relative H-display-inline-block H-float-left H-vertical-middle H-theme-font-color-white H-padding-horizontal-left-5 H-z-index-100"><i class="H-iconfont H-icon-arrow-left H-font-size-18 H-vertical-middle"></i><label class="H-display-block H-vertical-middle H-font-size-15">返回</label></span>
         <div class="H-header-title H-center-all H-font-size-18 H-text-show-row-1 H-theme-font-color-white H-position-absolute H-width-100-percent"><b><a href="/" style="color:#fff;text-decoration:none;">恋爱话术库</a></b></div>
     </header>
-	<header class="H-header H-theme-background-color2" id="header">
+<!-- 	<header class="H-header H-theme-background-color2" id="header">
 		<form  name="formsearch" action="/plus/search.php">
         <div class="H-header-title H-flexbox-horizontal H-vertical-middle H-font-size-18 H-text-show-row-1 H-theme-font-color-white H-position-absolute H-width-100-percent">
             <span class="H-icon H-position-relative H-display-inline-block H-vertical-middle H-theme-font-color-white H-padding-horizontal-right-5 H-z-index-100" style="margin-left: 10px;"><a href="/member" style="color:#fff;"><i class="H-iconfont H-icon-user2 H-font-size-18 H-vertical-middle"></i></a></span>
 			<div class="H-header-search H-flex-item H-margin-horizontal-both-10 H-padding-horizontal-both-10 H-position-relative H-theme-background-color2-active H-border-radius-15 H-line-height-normal" style="background:#fff;color:#999;">
-                <!--<span class="H-icon H-display-block H-position-absolute H-float-left H-z-index-10 H-vertical-middle" style="height: 100% !important;"><i class="H-iconfont H-icon-search H-font-size-16"></i></span>-->
+                <span class="H-icon H-display-block H-position-absolute H-float-left H-z-index-10 H-vertical-middle" style="height: 100% !important;"><i class="H-iconfont H-icon-search H-font-size-16"></i></span>
 				<input type="hidden" name="kwtype" value="0" />
                 <input id="search-keyword" value=""  name="q" type="text" name=q" placeholder="复制女生话中的两个字，搜索即可" id="H-header-search-text" class="H-width-100-percent H-box-sizing-border-box H-border-none H-padding-horizontal-both-10 H-font-size-14 H-padding-vertical-both-8 H-theme-background-color-transparent H-theme-font-color-white H-padding-horizontal-left-25 H-vertical-middle" style="color:#999;">
             </div>
@@ -40,15 +40,16 @@
         </div>
         <input type="hidden" name="search_types" id="search_type" value="">
 		</form>
-    </header>
-	<div style="width:100%;height:40px;text-align:center;line-height:40px;background:#fff;">
+    </header> -->
+	<!-- <div style="width:100%;height:40px;text-align:center;line-height:40px;background:#fff;">
 		<a href="/a/gonggao/10427.html" style="color:#000;text-decoration:none;">点会员中心-在线升级-看4万话术和案例-找到女朋友</a>
 
-	</div>	<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
+	</div>	
+	<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
 		<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">
 			恋爱话术库VIP会员
 		</div>
-	</div>
+	</div> -->
 <form name="f1" action="buy_action.php" method="post">
               <input type="hidden" name="product" value="member" />
 	<div class="test-box">
@@ -99,9 +100,7 @@
         </div>
             <div style="font: 0px/0px sans-serif;clear: both;display: block"> </div>
 		  <div style="width:90%;height:40px;margin:20px auto;"><button class="goumaibt" type="submit">立 即 支 付</button></div>
-		   <li>【注意】广大学员强烈推荐高级会员，千万人千万次的经验，万金买不到</li>
-                   <li>【会员特权】4万条话术 + 100多聊天实战案例 + 搜索功能 + 免费升级 + 精品教程 + 500人达人群答疑</li>
-		  
+		   <!-- <li>【注意】广大学员强烈推荐高级会员，千万人千万次的经验，万金买不到</li> -->
 		<div style="font: 0px/0px sans-serif;clear: both;display: block"> </div>
     </div>
 </form>

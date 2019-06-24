@@ -1,7 +1,7 @@
 package com.bkn.system.entity;
 
-public class LoveArticleInfo {
-    /** 文章索引ID */
+public class LoveClassInfo {
+    /** 课程索引ID */
     private Integer id;
 
     /** 短简介 */
@@ -19,7 +19,7 @@ public class LoveArticleInfo {
     /** 发文时间 */
     private String createDate;
 
-    /** 文章内容 */
+    /** 课程内容 */
     private String articleContent;
 
     public Integer getId() {

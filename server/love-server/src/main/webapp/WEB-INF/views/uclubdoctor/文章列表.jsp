@@ -59,7 +59,7 @@
 		<div class="H-flexbox-horizontal H-theme-background-color-white H-border-vertical-bottom-after" >
 	        <div class="H-padding-vertical-both-10" style="width: 25%;float: left;"><a href="/a/hssz/sy/325.html" style="text-decoration:none;"><img src="${loveArticleInfo.shutImagePath }" class="H-display-block H-margin-horizontal-left-10" style="width: 70px; height: 70px;"/></a></div>
 	        <div class="H-flex-item H-padding-10">
-	            <strong class="H-font-weight-normal font-weight-500 H-font-size-16 H-display-block"><a href="/a/hssz/sy/325.html" style="color:#000;text-decoration:none;">535期：与20岁的单生美女聊天，超</a></strong>
+	            <strong class="H-font-weight-normal font-weight-500 H-font-size-16 H-display-block"><a href="javascript:void(0)" style="color:#000;text-decoration:none;">${loveArticleInfo.shutStrongText }</a></strong>
 	            <div class="H-font-size-14 H-theme-font-color-999 H-text-show-row-2 H-margin-vertical-top-2"><a href="<%=basePath %>app/article/info?id=${loveArticleInfo.id}" style="color:#999;text-decoration:none;">${loveArticleInfo.shutText }</a></div>
 	        </div>
 	    </div>

@@ -1,38 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.bkn.browser.mybatis.LoveArticleInfoMapper">
-  <resultMap id="BaseResultMap" type="com.bkn.system.entity.LoveArticleInfo">
+<mapper namespace="com.bkn.browser.mybatis.LoveClassInfoMapper">
+  <resultMap id="BaseResultMap" type="com.bkn.system.entity.LoveClassInfo">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="shut_text" jdbcType="VARCHAR" property="shutText" />
-    <result column="article_content" jdbcType="LONGVARCHAR" property="articleContent" />
+    <result column="shut_strong_text" jdbcType="VARCHAR" property="shutStrongText" />
     <result column="shut_image_path" jdbcType="VARCHAR" property="shutImagePath" />
-    <result column="article_content" jdbcType="VARCHAR" property="articleContent" />
     <result column="person_image_path" jdbcType="VARCHAR" property="personImagePath" />
     <result column="create_date" jdbcType="CHAR" property="createDate" />
   </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.bkn.system.entity.LoveClassInfo">
+    <result column="article_content" jdbcType="LONGVARCHAR" property="articleContent" />
+  </resultMap>
   <sql id="Base_Column_List">
-    id, shut_text, article_content, shut_image_path, article_content, person_image_path, create_date
+    id, shut_text, shut_strong_text, shut_image_path, person_image_path, create_date
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <sql id="Blob_Column_List">
+    article_content
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
     select 
     <include refid="Base_Column_List" />
-    from love_article_info
+    ,
+    <include refid="Blob_Column_List" />
+    from love_class_info
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from love_article_info
+    delete from love_class_info
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.bkn.system.entity.LoveArticleInfo" useGeneratedKeys="true">
-    insert into love_article_info (shut_text, shut_strong_text, shut_image_path, 
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.bkn.system.entity.LoveClassInfo" useGeneratedKeys="true">
+    insert into love_class_info (shut_text, shut_strong_text, shut_image_path, 
       person_image_path, create_date, article_content
       )
     values (#{shutText,jdbcType=VARCHAR}, #{shutStrongText,jdbcType=VARCHAR}, #{shutImagePath,jdbcType=VARCHAR}, 
       #{personImagePath,jdbcType=VARCHAR}, #{createDate,jdbcType=CHAR}, #{articleContent,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.bkn.system.entity.LoveArticleInfo" useGeneratedKeys="true">
-    insert into love_article_info
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.bkn.system.entity.LoveClassInfo" useGeneratedKeys="true">
+    insert into love_class_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="shutText != null">
         shut_text,
@@ -74,8 +81,8 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.bkn.system.entity.LoveArticleInfo">
-    update love_article_info
+  <update id="updateByPrimaryKeySelective" parameterType="com.bkn.system.entity.LoveClassInfo">
+    update love_class_info
     <set>
       <if test="shutText != null">
         shut_text = #{shutText,jdbcType=VARCHAR},
@@ -98,8 +105,8 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.bkn.system.entity.LoveArticleInfo">
-    update love_article_info
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.bkn.system.entity.LoveClassInfo">
+    update love_class_info
     set shut_text = #{shutText,jdbcType=VARCHAR},
       shut_strong_text = #{shutStrongText,jdbcType=VARCHAR},
       shut_image_path = #{shutImagePath,jdbcType=VARCHAR},
@@ -108,8 +115,8 @@
       article_content = #{articleContent,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.bkn.system.entity.LoveArticleInfo">
-    update love_article_info
+  <update id="updateByPrimaryKey" parameterType="com.bkn.system.entity.LoveClassInfo">
+    update love_class_info
     set shut_text = #{shutText,jdbcType=VARCHAR},
       shut_strong_text = #{shutStrongText,jdbcType=VARCHAR},
       shut_image_path = #{shutImagePath,jdbcType=VARCHAR},
@@ -117,7 +124,11 @@
       create_date = #{createDate,jdbcType=CHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id="selectAll" resultMap="BaseResultMap">
-  	select * from love_article_info
+  <select id="selectAll" resultMap="ResultMapWithBLOBs">
+  	    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from love_class_info
   </select>
 </mapper>

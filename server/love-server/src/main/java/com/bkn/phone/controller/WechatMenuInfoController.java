@@ -83,6 +83,21 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     
     /**
+     * 查看课程详情
+    * @author 高国藩
+    * @date 2019年6月24日 下午4:15:23
+    * @param request
+    * @param response
+    * @param id
+    * @return
+     */
+    @RequestMapping(value = "app/class/info", method = RequestMethod.GET) 
+    public ModelAndView appClassInfo(HttpServletRequest request, HttpServletResponse response, Integer id) {
+        return wechatMenuInfoService.appClassInfo(id);
+    }
+    
+    
+    /**
      * 前往会员中心
     * @author 高国藩
     * @date 2019年6月17日 下午5:53:28
@@ -92,7 +107,11 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
      */
     @RequestMapping(value = "app/user", method = RequestMethod.GET) 
     public ModelAndView appUser(HttpServletRequest request, HttpServletResponse response) {
-        return wechatMenuInfoService.appUser();
+        String openId = "123456"; //getOpenId(request, response, App.Wechat.WECHAT_APP_ID_BKN);
+        if (StringUtil.isEmpty(openId)){
+            return null;
+        }
+        return wechatMenuInfoService.appUser(openId);
     }
     
     
@@ -155,9 +174,10 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     /**
      * 进入支付网页{@link WechatPaymentController.getNativeCode()}
     * @author 高国藩
-    * @date 2019年6月17日 下午8:25:57
+    * @date 2019年6月24日 下午4:22:32
     * @param request
     * @param response
+    * @param infoId        选择充值种类
     * @return
      */
     @RequestMapping(value = "app/pay", method = RequestMethod.GET) 

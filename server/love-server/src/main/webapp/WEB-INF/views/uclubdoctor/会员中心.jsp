@@ -31,12 +31,12 @@
         <span tapmode="" onclick="H.closeWin();" class="H-icon H-position-relative H-display-inline-block H-float-left H-vertical-middle H-theme-font-color-white H-padding-horizontal-left-5 H-z-index-100"><i class="H-iconfont H-icon-arrow-left H-font-size-18 H-vertical-middle"></i><label class="H-display-block H-vertical-middle H-font-size-15">返回</label></span>
         <div class="H-header-title H-center-all H-font-size-18 H-text-show-row-1 H-theme-font-color-white H-position-absolute H-width-100-percent"><b><a href="/" style="color:#fff;text-decoration:none;">恋爱话术库</a></b></div>
     </header>
-	<header class="H-header H-theme-background-color2" id="header">
+<!-- 	<header class="H-header H-theme-background-color2" id="header">
 		<form  name="formsearch" action="/plus/search.php">
         <div class="H-header-title H-flexbox-horizontal H-vertical-middle H-font-size-18 H-text-show-row-1 H-theme-font-color-white H-position-absolute H-width-100-percent">
             <span class="H-icon H-position-relative H-display-inline-block H-vertical-middle H-theme-font-color-white H-padding-horizontal-right-5 H-z-index-100" style="margin-left: 10px;"><a href="/member" style="color:#fff;"><i class="H-iconfont H-icon-user2 H-font-size-18 H-vertical-middle"></i></a></span>
 			<div class="H-header-search H-flex-item H-margin-horizontal-both-10 H-padding-horizontal-both-10 H-position-relative H-theme-background-color2-active H-border-radius-15 H-line-height-normal" style="background:#fff;color:#999;">
-                <!--<span class="H-icon H-display-block H-position-absolute H-float-left H-z-index-10 H-vertical-middle" style="height: 100% !important;"><i class="H-iconfont H-icon-search H-font-size-16"></i></span>-->
+                <span class="H-icon H-display-block H-position-absolute H-float-left H-z-index-10 H-vertical-middle" style="height: 100% !important;"><i class="H-iconfont H-icon-search H-font-size-16"></i></span>
 				<input type="hidden" name="kwtype" value="0" />
                 <input id="search-keyword" value=""  name="q" type="text" name=q" placeholder="复制女生话中的两个字，搜索即可" id="H-header-search-text" class="H-width-100-percent H-box-sizing-border-box H-border-none H-padding-horizontal-both-10 H-font-size-14 H-padding-vertical-both-8 H-theme-background-color-transparent H-theme-font-color-white H-padding-horizontal-left-25 H-vertical-middle" style="color:#999;">
             </div>
@@ -44,27 +44,29 @@
         </div>
         <input type="hidden" name="search_types" id="search_type" value="">
 		</form>
-    </header>
+    </header> -->
 	<div style="width:100%;height:40px;text-align:center;line-height:40px;background:#fff;">
 		<a href="/a/gonggao/10427.html" style="color:#000;text-decoration:none;">点会员中心-在线升级-看4万话术和案例-找到女朋友</a>
 
 	</div>	<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
 		<div class="H-flex-item H-font-size-16">
-			<a href="/a/keceng/kechengzhongxin/2018/1027/10696.html?1540653984"><img src="/static/image/hytb.jpg" width="100%"></a>
+			<a href="/a/keceng/kechengzhongxin/2018/1027/10696.html?1540653984"><img src="<%=basePath %>/static-resource/images/hytb.jpg" width="100%"></a>
 		</div>
 	</div>
 	<div style="margin-top:15px;padding-bottom: 20px;" class="H-flexbox-horizontal H-box-sizing-border-box H-theme-background-color-white H-border-vertical-bottom-after H-clear-both H-padding-horizontal-both-10 H-padding-vertical-both-8 H-touch-active">
-        <div style="width:50px;height:50px;"><img src="/static/image/no-pic.jpg" class="H-width-100-percent H-height-100-percent H-display-block H-border-radius-circle H-border-both"></div>
+        <div style="width:50px;height:50px;"><img src="${userInfo.imagePath }" class="H-width-100-percent H-height-100-percent H-display-block H-border-radius-circle H-border-both"></div>
         <div class="H-flex-item H-padding-horizontal-both-10 H-vertical-middle H-overflow-hidden" style="padding-left: 20px;">
             <div class="H-width-100-percent">
-                <strong class="H-font-weight-normal H-display-block H-font-weight-500 H-font-size-16 H-text-show-row-1">18734911338</strong>
-                <div class="H-theme-font-color-999 H-font-size-14 H-padding-vertical-top-3 H-text-show-row-1">
-					当前用户组：注册会员，拥有金币：0 个。				</div>
+                <strong class="H-font-weight-normal H-display-block H-font-weight-500 H-font-size-16 H-text-show-row-1">${userInfo.phone }</strong>
+                <div style="font-size: 1.2rem;" class="H-theme-font-color-999 H-font-size-14 H-padding-vertical-top-3 H-text-show-row-1">
+					<c:if test="${userInfo.isVip }">您已是会员用户，继续保持哦</c:if>
+					<c:if test="${!userInfo.isVip }">您还不是会员用户，升级后解锁更多姿势哦</c:if>
+				</div>
             </div>
         </div>
     </div>
 	<div class="H-n-grid H-border-vertical-top-after H-clear-both  H-overflow-auto">
-		<a href="/member/buy.php" style="color:#000;text-decoration:none;">
+		<a href="<%=basePath %>app/mvp" style="color:#000;text-decoration:none;">
 			<div class="H-display-table-cell H-float-left H-box-sizing-border-box H-width-avg-3 H-center-all H-theme-background-color-white H-border-horizontal-right-after H-border-vertical-bottom-after H-padding-vertical-both-10 H-touch-active" style="height: 100px;">
 				<div class="H-text-align-center">
 					<span class="H-icon H-display-block H-horizontal-center"><i class="H-theme-font-color-red H-iconfont H-icon-official H-font-size-28 H-vertical-middle"></i></span>
@@ -72,7 +74,7 @@
 				</div>
 			</div>
 		</a>
-		<a href="/a/keceng/kechengzhongxin/2018/1027/10695.html?1540650804" style="color:#000;text-decoration:none;">
+		<a href="javascript:void(0)" style="color:#000;text-decoration:none;">
 			<div class="H-display-table-cell H-float-left H-box-sizing-border-box H-width-avg-3 H-center-all H-theme-background-color-white H-border-horizontal-right-after H-border-vertical-bottom-after H-padding-vertical-both-10 H-touch-active" style="height: 100px;">
 				<div class="H-text-align-center">
 					<span class="H-icon H-display-block H-horizontal-center"><i class="H-theme-font-color-blue H-iconfont H-icon-group-user H-font-size-28 H-vertical-middle"></i></span>
@@ -80,7 +82,7 @@
 				</div>
 			</div>
 		</a>
-		<a href="/plus/list.php?tid=64" style="color:#000;text-decoration:none;">
+		<a href="<%=basePath %>app/class" style="color:#000;text-decoration:none;">
 			<div class="H-display-table-cell H-float-left H-box-sizing-border-box H-width-avg-3 H-center-all H-theme-background-color-white H-border-horizontal-right-after H-border-vertical-bottom-after H-padding-vertical-both-10 H-touch-active" style="height: 100px;">
 				<div class="H-text-align-center">
 					<span class="H-icon H-display-block H-horizontal-center"><i class="H-theme-font-color-black H-iconfont H-icon-kefu H-font-size-28 H-vertical-middle"></i></span>
@@ -90,34 +92,12 @@
 		</a>
 	</div>
 	<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
-		<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">QQ：170828958</div>
+		<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">微信搜索：170828958,170828958 联系我们吧</div>
 	</div>
-	<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
-		<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">QQ：2976594675</div>
-	</div>
-	<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
-		<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">
-			【请女朋友请顿饭的钱】开个房的费用，开通会员，让你变成撩人的小哥哥，找到真正的另一半
-		</div>
-	</div>
-	<a href="/static/tougao.html" style="color:#000;text-decoration:none;">
-		<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
-			<span class="H-icon H-display-block H-margin-horizontal-left-10"><i class="H-iconfont H-icon-hot H-font-size-18 H-vertical-middle H-theme-font-color-red"></i></span>
-			<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">投稿赚钱</div>
-			<span class="H-icon H-padding-horizontal-right-5 H-display-block"><i class="H-iconfont H-icon-arrow-right H-theme-font-color-ccc H-font-size-14 H-vertical-middle"></i></span>
-		</div>
-	</a>
-	<a href="/member/operation.php" style="color:#000;text-decoration:none;">
+	<a href="<%=basePath %>app/order" style="color:#000;text-decoration:none;">
 		<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
 			<span class="H-icon H-display-block H-margin-horizontal-left-10"><i class="H-iconfont H-icon-search-list H-font-size-18 H-vertical-middle H-theme-font-color5"></i></span>
 			<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">订单列表</div>
-			<span class="H-icon H-padding-horizontal-right-5 H-display-block"><i class="H-iconfont H-icon-arrow-right H-theme-font-color-ccc H-font-size-14 H-vertical-middle"></i></span>
-		</div>
-	</a>
-	<a href="/member/edit_baseinfo.php" style="color:#000;text-decoration:none;">
-		<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
-			<span class="H-icon H-display-block H-margin-horizontal-left-10"><i class="H-iconfont H-icon-user-set H-font-size-18 H-vertical-middle H-theme-font-color1"></i></span>
-			<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">修改密码</div>
 			<span class="H-icon H-padding-horizontal-right-5 H-display-block"><i class="H-iconfont H-icon-arrow-right H-theme-font-color-ccc H-font-size-14 H-vertical-middle"></i></span>
 		</div>
 	</a>
@@ -125,13 +105,6 @@
 		<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
 			<span class="H-icon H-display-block H-margin-horizontal-left-10"><i class="H-iconfont H-icon-user-set H-font-size-18 H-vertical-middle H-theme-font-color1"></i></span>
 			<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">联系客服</div>
-			<span class="H-icon H-padding-horizontal-right-5 H-display-block"><i class="H-iconfont H-icon-arrow-right H-theme-font-color-ccc H-font-size-14 H-vertical-middle"></i></span>
-		</div>
-	</a>
-	<a href="/member/index_do.php?fmdo=login&dopost=exit" style="color:#000;text-decoration:none;">
-		<div class="H-text-list H-flexbox-horizontal  H-theme-background-color-white H-border-vertical-bottom-after H-vertical-middle H-touch-active">
-			<span class="H-icon H-display-block H-margin-horizontal-left-10"><i class="H-iconfont H-icon-setting H-font-size-18 H-vertical-middle H-theme-font-color9"></i></span>
-			<div class="H-flex-item H-padding-horizontal-both-10 H-font-size-16 H-padding-vertical-both-8">退出登录</div>
 			<span class="H-icon H-padding-horizontal-right-5 H-display-block"><i class="H-iconfont H-icon-arrow-right H-theme-font-color-ccc H-font-size-14 H-vertical-middle"></i></span>
 		</div>
 	</a>

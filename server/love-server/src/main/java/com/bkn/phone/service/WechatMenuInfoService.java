@@ -10,8 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.bkn.browser.mybatis.LoveArticleInfoMapper;
 import com.bkn.browser.mybatis.LoveCategoryInfoMapper;
+import com.bkn.browser.mybatis.LoveClassInfoMapper;
+import com.bkn.browser.mybatis.LoveUserInfoMapper;
 import com.bkn.system.entity.LoveArticleInfo;
 import com.bkn.system.entity.LoveCategoryInfo;
+import com.bkn.system.entity.LoveClassInfo;
+import com.bkn.system.entity.LoveUserInfo;
 
 
 
@@ -26,6 +30,9 @@ public class WechatMenuInfoService {
     
     @Autowired LoveCategoryInfoMapper loveCategoryInfoMapper;
     @Autowired LoveArticleInfoMapper loveArticleInfoMapper;
+    @Autowired LoveClassInfoMapper loveClassInfoMapper;
+    @Autowired LoveUserInfoMapper loveUserInfoMapper;
+    
     
     public ModelAndView appIndex() {
         ModelAndView modelAndView = new ModelAndView("uclubdoctor/话术首页");
@@ -59,11 +66,33 @@ public class WechatMenuInfoService {
 
     public ModelAndView appClass() {
         ModelAndView modelAndView = new ModelAndView("uclubdoctor/课程中心");
+        List<LoveClassInfo> loveArticleInfos = loveClassInfoMapper.selectAll();
+        modelAndView.addObject("loveArticleInfos", loveArticleInfos);
         return modelAndView;
     }
+    
+    
+    /**
+     * 课程详情信息
+    * @author 高国藩
+    * @date 2019年6月24日 下午4:15:46
+    * @param id
+    * @return
+     */
+    public ModelAndView appClassInfo(Integer id) {
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/课程详情");
+        LoveClassInfo loveArticleInfos = loveClassInfoMapper.selectByPrimaryKey(id);
+        modelAndView.addObject("loveArticleInfos", loveArticleInfos);
+        return modelAndView;
+    }
+    
 
-    public ModelAndView appUser() {
+    public ModelAndView appUser(String openId) {
         ModelAndView modelAndView = new ModelAndView("uclubdoctor/会员中心");
+        LoveUserInfo selectByWechatId = loveUserInfoMapper.selectByWechatId(openId);
+        if (selectByWechatId == null)
+            return new ModelAndView("redirect:app/register");
+        modelAndView.addObject("userInfo", selectByWechatId);
         return modelAndView;
     }
 
@@ -88,7 +117,7 @@ public class WechatMenuInfoService {
     }
 
     public ModelAndView appPay(String openId, Integer infoId) {
-        ModelAndView modelAndView = new ModelAndView("uclubdoctor/pay");
+        ModelAndView modelAndView = new ModelAndView("uclubdoctor/预支付");
         modelAndView.addObject("openId", openId);
         modelAndView.addObject("info", infoId);
         return modelAndView;
