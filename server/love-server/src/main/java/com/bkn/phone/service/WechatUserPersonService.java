@@ -1,6 +1,8 @@
 package com.bkn.phone.service;
 
 
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,6 +10,11 @@ import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.RandomStringUtils;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,8 +26,11 @@ import com.bkn.browser.config.RouteConfig;
 import com.bkn.browser.mybatis.LoveLiaobeiAnswerMapper;
 import com.bkn.browser.mybatis.LoveLiaobeiQuestionMapper;
 import com.bkn.browser.mybatis.LoveUserInfoMapper;
+import com.bkn.browser.utils.ExcleUtils;
 import com.bkn.browser.utils.HttpClientUtil;
+import com.bkn.browser.utils.StringUtil;
 import com.bkn.system.dto.BaseDto;
+import com.bkn.system.entity.LoveLiaobeiAnswer;
 import com.bkn.system.entity.LoveLiaobeiQuestion;
 import com.bkn.system.entity.LoveUserInfo;
 import com.bkn.system.service.RedisService;
@@ -118,6 +128,157 @@ public class WechatUserPersonService {
         System.out.println(net.sf.json.JSONArray.fromObject(liaobeiQuestions));
         return modelAndView;
     }
+    
+    
+    /**
+     * 一对一话术上传
+    * @author 高国藩
+    * @date 2019年8月19日 下午3:25:33
+    * @param in
+    * @param fileName
+    * @return
+     */
+    public BaseDto batchsXlsOTO(InputStream in, String fileName) {
+        boolean isE2007 = false;
+        if (fileName.endsWith("xlsx")) {
+            isE2007 = true;
+        }
+        Workbook wb = null;
+        try {
+            wb = isE2007 ? new XSSFWorkbook(in) : new HSSFWorkbook(in);
+        } catch (Exception e) {
+        }
+        Sheet sheet = wb.getSheetAt(0);
+        List<LoveLiaobeiQuestion> batchs = new ArrayList<>();
+        int lastRowNum = sheet.getLastRowNum();
+        for (int rowNum = 1; rowNum <= lastRowNum; rowNum++) {
+            Row xssfRow = sheet.getRow(rowNum);
+            String tags = ExcleUtils.changeCellToString(xssfRow.getCell(25));
+            String question = ExcleUtils.changeCellToString(xssfRow.getCell(0));
+            LoveLiaobeiQuestion liaobeiQuestion = new LoveLiaobeiQuestion();
+            liaobeiQuestion.setQuestionDesc(question);
+            liaobeiQuestion.setQuestionTags(tags);
+            List<LoveLiaobeiAnswer> answers = new ArrayList<LoveLiaobeiAnswer>();
+            int index = 1;
+            String answer = null;
+            for(;;) {
+                answer = ExcleUtils.changeCellToString(xssfRow.getCell(index));
+                if (StringUtil.isEmpty(answer))
+                    break;
+                LoveLiaobeiAnswer liaobeiAnswer = new LoveLiaobeiAnswer();
+                liaobeiAnswer.setAnswerDesc(answer);
+                answers.add(liaobeiAnswer);
+                index++;
+            }
+            liaobeiQuestion.setAnswers(answers);
+            batchs.add(liaobeiQuestion);
+        }
+        for (LoveLiaobeiQuestion tddsLiaobeiQuestion : batchs) {
+            batchs(tddsLiaobeiQuestion);
+        }
+        return new BaseDto(0, "导入成功");
+    }
+    
+    
+    
+    /**
+     * 连环话术上传
+    * @author 高国藩
+    * @date 2019年8月19日 下午3:40:33
+    * @param in
+    * @param fileName
+    * @return
+     */
+    public BaseDto batchsXlsOTW(InputStream in, String fileName) {
+        boolean isE2007 = false;
+        if (fileName.endsWith("xlsx")) {
+            isE2007 = true;
+        }
+        Workbook wb = null;
+        try {
+            wb = isE2007 ? new XSSFWorkbook(in) : new HSSFWorkbook(in);
+        } catch (Exception e) {
+        }
+        Sheet sheet = wb.getSheetAt(0);
+        List<LoveLiaobeiQuestion> batchs = new ArrayList<>();
+        for (int rowNum = 1; rowNum <= sheet.getLastRowNum(); rowNum++) {
+            Row xssfRow = sheet.getRow(rowNum);
+            String tags = ExcleUtils.changeCellToString(xssfRow.getCell(25));
+            LoveLiaobeiQuestion liaobeiQuestion = batchsXlsOTW(xssfRow, 0, tags, null);
+            batchs.add(liaobeiQuestion);
+        }
+        for (LoveLiaobeiQuestion tddsLiaobeiQuestion : batchs) {
+            batchs(tddsLiaobeiQuestion);
+        }
+        return new BaseDto(0, "导入成功");
+    }
+    
+    
+    /**
+     * 连环话术拼接数据结构
+    * @author 高国藩
+    * @date 2019年8月19日 下午3:49:01
+    * @param xssfRow
+    * @param index
+    * @param tags
+    * @return
+     */
+    public LoveLiaobeiQuestion batchsXlsOTW(Row xssfRow, int index, String tags, Integer tutorId) {
+        String question = ExcleUtils.changeCellToString(xssfRow.getCell(index));
+        LoveLiaobeiQuestion liaobeiQuestion = new LoveLiaobeiQuestion();
+        liaobeiQuestion.setQuestionDesc(question);
+        liaobeiQuestion.setQuestionTags(tags);
+        liaobeiQuestion.setTutorId(tutorId);
+        
+        List<LoveLiaobeiAnswer> answers = new ArrayList<LoveLiaobeiAnswer>();
+        LoveLiaobeiAnswer liaobeiAnswer = new LoveLiaobeiAnswer();
+        liaobeiAnswer.setAnswerDesc(ExcleUtils.changeCellToString(xssfRow.getCell(index+1)));
+        answers.add(liaobeiAnswer);
+        liaobeiQuestion.setAnswers(answers);
+        if (!StringUtil.isEmpty(ExcleUtils.changeCellToString(xssfRow.getCell(index+2)))) {
+            liaobeiQuestion.setQuestion(batchsXlsOTW(xssfRow, index+2, tags, tutorId));
+        }
+        return liaobeiQuestion;
+    }
+
+    
+    /**
+     * 递归插入话术信息库
+    * @author 高国藩
+    * @date 2019年8月19日 下午1:32:55
+    * @param liaobeiQuestion
+    * @return
+     */
+    public Integer batchs(LoveLiaobeiQuestion liaobeiQuestion) {
+        LoveLiaobeiQuestion next = liaobeiQuestion.getQuestion();
+        if (next != null) {
+            next.setQuestionTags(null);
+            Integer batchs = batchs(next);
+            liaobeiQuestion.setQuestionNext(batchs);
+        } 
+        return insertMysqlBatchs(liaobeiQuestion);
+    }
+    
+    
+    /**
+     * 持久化单条数据信息
+    * @author 高国藩
+    * @date 2019年8月19日 下午1:39:05
+    * @param liaobeiQuestion
+    * @return
+     */
+    public Integer insertMysqlBatchs(LoveLiaobeiQuestion liaobeiQuestion) {
+        liaobeiQuestionMapper.insertSelective(liaobeiQuestion);
+        List<LoveLiaobeiAnswer> answers = liaobeiQuestion.getAnswers();
+        for (LoveLiaobeiAnswer tddsLiaobeiAnswer : answers) {
+            if (!StringUtil.isEmpty(tddsLiaobeiAnswer.getAnswerDesc())) {
+                tddsLiaobeiAnswer.setQuestionId(liaobeiQuestion.getQuestionId());
+                loveLiaobeiAnswerMapper.insertSelective(tddsLiaobeiAnswer);
+            }
+        }
+        return liaobeiQuestion.getQuestionId();
+    }
+
 
 
     /**

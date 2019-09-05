@@ -5,6 +5,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,6 +20,26 @@ import org.apache.commons.lang.StringUtils;
  * @date 2014-4-9
  */
 public class StringUtil {
+
+    /**
+     * 获取随机字符串
+     * @param length 生成的随机字符串长度
+     * */
+    public static String getStrRandom(int length) {
+        if (length < 1) {
+            return "";
+        } else {
+            String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz";
+            StringBuilder sb = new StringBuilder();
+            Random ra = new Random();
+            int index = 0;
+            for (int i = 0; i < length; i++) {
+                index = ra.nextInt(str.length());
+                sb.append(str.charAt(index));
+            }
+            return sb.toString();
+        }
+    }
 
     /**
      * 获取毫秒类型主键，附加七位纳秒值
@@ -41,18 +62,18 @@ public class StringUtil {
     public static int getRandomNum(int num) {
         int ranNum = 0;
         switch (num) {
-            case 3:
-                ranNum = (int) ((Math.random() * 9 + 1) * 100);
-                break;
-            case 4:
-                ranNum = (int) ((Math.random() * 9 + 1) * 1000);
-                break;
-            case 5:
-                ranNum = (int) ((Math.random() * 9 + 1) * 10000);
-                break;
-            default:
-                ranNum = (int) ((Math.random() * 9 + 1) * 100000);
-                break;
+        case 3:
+            ranNum = (int) ((Math.random() * 9 + 1) * 100);
+            break;
+        case 4:
+            ranNum = (int) ((Math.random() * 9 + 1) * 1000);
+            break;
+        case 5:
+            ranNum = (int) ((Math.random() * 9 + 1) * 10000);
+            break;
+        default:
+            ranNum = (int) ((Math.random() * 9 + 1) * 100000);
+            break;
         }
         return ranNum;
     }
@@ -65,7 +86,7 @@ public class StringUtil {
     * @return
      */
     public static boolean isEmpty(String str) {
-        return str == null || str.length() == 0;
+        return str == null || str.length() == 0 || str.trim().equals("");
     }
 
     /**
@@ -113,11 +134,11 @@ public class StringUtil {
             return false;
         }
         try {
-            Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0-9])|(17[0,6-7])|(14[5,7]))\\d{8}$");
+            Pattern p = Pattern.compile(
+                    "^((13[0-9])|(15[^4,\\D])|(18[0-9])|(17[0,6-7])|(14[5,7]))\\d{8}$");
             Matcher m = p.matcher(phoneNumber);
             return m.matches();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return false;
         }
 
@@ -137,8 +158,7 @@ public class StringUtil {
             Pattern p = Pattern.compile("^[A-Za-z0-9]{6,18}$");
             Matcher m = p.matcher(password);
             return m.matches();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return false;
         }
     }
@@ -152,11 +172,11 @@ public class StringUtil {
      */
     public static boolean isValidUserNickName(String nickname) {
         try {
-            Pattern p = Pattern.compile("[\u4e00-\u9fa5]|[a-zA-z0-9]*\b[a-z]*|[A-z]*|[0-9]*|[\u4e00-\u9fa5]*$");
+            Pattern p = Pattern.compile(
+                    "[\u4e00-\u9fa5]|[a-zA-z0-9]*\b[a-z]*|[A-z]*|[0-9]*|[\u4e00-\u9fa5]*$");
             Matcher m = p.matcher(nickname);
             return m.matches();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return false;
         }
     }
@@ -167,7 +187,8 @@ public class StringUtil {
      * @return 合法返回true；否则返回false
      */
     public static boolean isEmail(final String email) {
-        Pattern p = Pattern.compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
+        Pattern p = Pattern
+                .compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
         Matcher m = p.matcher(email);
         return m.matches();
     }
@@ -192,10 +213,11 @@ public class StringUtil {
      * @return 加密后的32位字符串
      */
     public static String md5(Object s) {
-    	if (s == null || StringUtils.isBlank(s.toString())) {
-    		return null;
-    	}
-        char[] hexDigits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+        if (s == null || StringUtils.isBlank(s.toString())) {
+            return null;
+        }
+        char[] hexDigits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                'A', 'B', 'C', 'D', 'E', 'F' };
         try {
             byte[] btInput = s.toString().getBytes();
             // 获得MD5摘要算法的 MessageDigest 对象
@@ -214,8 +236,7 @@ public class StringUtil {
                 str[k++] = hexDigits[byte0 & 0xf];
             }
             return new String(str);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -230,21 +251,23 @@ public class StringUtil {
         String ipAddress = null;
         ipAddress = request.getRemoteAddr();
         ipAddress = request.getHeader("x-forwarded-for");
-        if (ipAddress == null || ipAddress.length() == 0 || "unknown".equalsIgnoreCase(ipAddress)) {
+        if (ipAddress == null || ipAddress.length() == 0
+                || "unknown".equalsIgnoreCase(ipAddress)) {
             ipAddress = request.getHeader("Proxy-Client-IP");
         }
-        if (ipAddress == null || ipAddress.length() == 0 || "unknown".equalsIgnoreCase(ipAddress)) {
+        if (ipAddress == null || ipAddress.length() == 0
+                || "unknown".equalsIgnoreCase(ipAddress)) {
             ipAddress = request.getHeader("WL-Proxy-Client-IP");
         }
-        if (ipAddress == null || ipAddress.length() == 0 || "unknown".equalsIgnoreCase(ipAddress)) {
+        if (ipAddress == null || ipAddress.length() == 0
+                || "unknown".equalsIgnoreCase(ipAddress)) {
             ipAddress = request.getRemoteAddr();
             if (ipAddress.equals("127.0.0.1")) {
                 // 根据网卡取本机配置的IP
                 InetAddress inet = null;
                 try {
                     inet = InetAddress.getLocalHost();
-                }
-                catch (UnknownHostException e) {
+                } catch (UnknownHostException e) {
                     e.printStackTrace();
                 }
                 ipAddress = inet.getHostAddress();
@@ -267,15 +290,19 @@ public class StringUtil {
     * @return boolean
      */
     public static boolean isNull(String s) {
-        return (s == null || s.trim().length() == 0 || "null".equals(s.trim().toLowerCase()));
+        return (s == null || s.trim().length() == 0
+                || "null".equals(s.trim().toLowerCase()));
     }
 
     /**
      * 数字
      */
-    static final char[] DIGITS = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-                                   'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 
-                                   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '+', '/' };
+    static final char[] DIGITS = { '0', '1', '2', '3', '4', '5', '6', '7', '8',
+            '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+            'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+            'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+            'Z', '+', '/' };
 
     /**
      * 把10进制的数字转换成64进制
@@ -325,22 +352,18 @@ public class StringUtil {
         int num = ((int) ch);
         if (num >= 48 && num <= 57) {
             return num - 48;
-        }
-        else if (num >= 97 && num <= 122) {
+        } else if (num >= 97 && num <= 122) {
             return num - 87;
-        }
-        else if (num >= 65 && num <= 90) {
+        } else if (num >= 65 && num <= 90) {
             return num - 29;
-        }
-        else if (num == 43) {
+        } else if (num == 43) {
             return 62;
-        }
-        else if (num == 47) {
+        } else if (num == 47) {
             return 63;
         }
         return 0;
     }
-    
+
     /**
      * escape 加密
     * @author 高国藩
@@ -356,17 +379,15 @@ public class StringUtil {
         for (i = 0; i < src.length(); i++) {
             j = src.charAt(i);
             if (Character.isDigit(j) || Character.isLowerCase(j)
-                    || Character.isUpperCase(j)){
+                    || Character.isUpperCase(j)) {
                 tmp.append(j);
-            }
-            else if (j < 256) {
+            } else if (j < 256) {
                 tmp.append("%");
-                if (j < 16){
+                if (j < 16) {
                     tmp.append("0");
                     tmp.append(Integer.toString(j, 16));
                 }
-            } 
-            else {
+            } else {
                 tmp.append("%u");
                 tmp.append(Integer.toString(j, 16));
             }
@@ -391,24 +412,21 @@ public class StringUtil {
             pos = src.indexOf("%", lastPos);
             if (pos == lastPos) {
                 if (src.charAt(pos + 1) == 'u') {
-                    ch = (char) Integer.parseInt(src
-                            .substring(pos + 2, pos + 6), 16);
+                    ch = (char) Integer
+                            .parseInt(src.substring(pos + 2, pos + 6), 16);
                     tmp.append(ch);
                     lastPos = pos + 6;
-                } 
-                else {
-                    ch = (char) Integer.parseInt(src
-                            .substring(pos + 1, pos + 3), 16);
+                } else {
+                    ch = (char) Integer
+                            .parseInt(src.substring(pos + 1, pos + 3), 16);
                     tmp.append(ch);
                     lastPos = pos + 3;
                 }
-            } 
-            else {
+            } else {
                 if (pos == -1) {
                     tmp.append(src.substring(lastPos));
                     lastPos = src.length();
-                } 
-                else {
+                } else {
                     tmp.append(src.substring(lastPos, pos));
                     lastPos = pos;
                 }
@@ -416,7 +434,7 @@ public class StringUtil {
         }
         return tmp.toString();
     }
-    
+
     /**
      * 如果传入的参数是空，返回0
     * @author 高国藩
@@ -424,30 +442,31 @@ public class StringUtil {
     * @param str   str
     * @return      String
      */
-    public static String isEmptyAndEquese(Object str){
-        if (str == null){
+    public static String isEmptyAndEquese(Object str) {
+        if (str == null) {
             return "0";
         }
         return new BigDecimal(str.toString()).toString();
     }
-    
+
     /** 手机号码前缀 */
-    private static String[] telFirst = "134,135,136,137,138,139,150,151,152,157,158,159,130,131,132,155,156,133,153".split(",");  
-    
+    private static String[] telFirst = "134,135,136,137,138,139,150,151,152,157,158,159,130,131,132,155,156,133,153"
+            .split(",");
+
     /**
      * 获取一个手机号码
     * @author 高国藩
     * @date 2016年9月7日 下午5:32:15
     * @return String
      */
-    public static String getRandomPhone() {  
-        int index = getNum(0, telFirst.length - 1);  
-        String first = telFirst[index];  
-        String second = String.valueOf(getNum(1, 888) + 10000).substring(1);  
-        String thrid = String.valueOf(getNum(1, 9100) + 10000).substring(1);  
-        return first + second + thrid;  
-    }  
-    
+    public static String getRandomPhone() {
+        int index = getNum(0, telFirst.length - 1);
+        String first = telFirst[index];
+        String second = String.valueOf(getNum(1, 888) + 10000).substring(1);
+        String thrid = String.valueOf(getNum(1, 9100) + 10000).substring(1);
+        return first + second + thrid;
+    }
+
     /**
      * 获取一个指定范围内的随机码
     * @author 高国藩
@@ -456,8 +475,8 @@ public class StringUtil {
     * @param end   end
     * @return      static
      */
-    public static int getNum(int start, int end) {  
-        return (int)(Math.random()*(end - start + 1) + start);  
-    } 
-    
+    public static int getNum(int start, int end) {
+        return (int) (Math.random() * (end - start + 1) + start);
+    }
+
 }

@@ -30,7 +30,7 @@
       #{questionTags,jdbcType=VARCHAR}, #{questionNext,jdbcType=INTEGER}, #{tutorId,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.bkn.system.entity.LoveLiaobeiQuestion">
+  <insert id="insertSelective" parameterType="com.bkn.system.entity.LoveLiaobeiQuestion" useGeneratedKeys="true" keyProperty="questionId">
     insert into love_liaobei_question
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="questionId != null">
