@@ -23,13 +23,13 @@ public interface App {
 		/** 分页查询默认的每页显示数量 */
 		public static final int API_DEFAULT_PAGE_SIZE = 50;
 		/** 服务器域名 */
-		public static final String SERVER_HOST = "www.sumer.ink";
+		public static final String SERVER_HOST = "love.jobwisdom.cn";
 		/** 消息队列主机 */
 		public static final String NOTYNOCE_SERVER_HOST = "120.24.165.15";
 		/** 服务器地址 */
-		public static final String SERVER_BASE_URL = "http://" + SERVER_HOST + "/uclubdoctor";
+		public static final String SERVER_BASE_URL = "http://" + SERVER_HOST + "/love-server";
 		/** 项目根目录 */
-        public static final String SERVER_CONTEXT_LOADER = "uclubdoctor";
+        public static final String SERVER_CONTEXT_LOADER = "love-server";
 		/** 权限不足 */
 		public static final int ERROR_CODE_FORBIDDEN = HttpServletResponse.SC_FORBIDDEN;
 		/** 会话失效 */
@@ -134,16 +134,16 @@ public interface App {
 		public static final String FETCH_MEDIA_URL = "http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=%s&media_id=%s";
 
 		/** 巴康诺开放授权平台 原始ID */
-        public static final String WECHAT_WSG_ID_BKN = "gh_868860c07201";
+        public static final String WECHAT_WSG_ID_BKN = "gh_b65d3274f7dd";
 		/** 巴康诺开放授权平台 appId */
-		public static final String WECHAT_APP_ID_BKN = "wx89a8d24957cf169c";
+		public static final String WECHAT_APP_ID_BKN = "wx9831a4d02de2fba3";
 	    /** 巴康诺开放授权平台 secret */
-        public static final String WECHAT_APP_SECRET_BKN = "9a8d655ef8d3ef43fa1b51a11fdfc837";
+        public static final String WECHAT_APP_SECRET_BKN = "d41c997bc5a68276552e6c89c7711201";
         
 		/** 我道微信应用ID */
-		public static final String PAY_APP_KEY_JOBWISDOM = "wx89a8d24957cf169c";
+		public static final String PAY_APP_KEY_JOBWISDOM = "wx9831a4d02de2fba3";
 		/** 我道微信应用ID */
-        public static final String PAY_APP_SCRETE_JOBWISDOM = "9a8d655ef8d3ef43fa1b51a11fdfc837";
+        public static final String PAY_APP_SCRETE_JOBWISDOM = "d41c997bc5a68276552e6c89c7711201";
         
 		/** 我道微信支付商户号 */
 		public static final String MCH_ID_JOBWISDOM = "1520155021";
