@@ -68,7 +68,7 @@ public class CatchExeceptionHandler implements HandlerExceptionResolver {
     
     /**
      * 获取URL接口中满足请求接口的类型变量
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年10月25日 下午6:08:17
     * @return   接口地址描述
     * @throws Exception 异常类

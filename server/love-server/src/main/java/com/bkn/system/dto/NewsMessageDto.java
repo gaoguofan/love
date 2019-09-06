@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 图文消息对应微信字段，用于json转换
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 上午12:13:52
  */
 public class NewsMessageDto extends BaseMessageDto {

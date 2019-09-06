@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 封装参数
-* @author 高国藩
+* @author 李志伟
 * @date 2016年12月23日 上午11:00:08
  */
 public class MapParam extends HashMap<String, Object> {  
@@ -31,7 +31,7 @@ public class MapParam extends HashMap<String, Object> {
 
     /**
      * wucan
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年12月23日 上午11:00:23
      */
     public MapParam() {  

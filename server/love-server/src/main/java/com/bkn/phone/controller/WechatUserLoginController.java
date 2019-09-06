@@ -1,6 +1,8 @@
 package com.bkn.phone.controller;
 
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -9,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bkn.browser.config.App;
@@ -18,12 +22,14 @@ import com.bkn.browser.utils.StringUtil;
 import com.bkn.phone.service.WechatUserPersonService;
 import com.bkn.system.dto.BaseDto;
 import com.bkn.wechat.msg.WechatUserTemplateMsg;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 
 
 /**
  * 移动端登陆操作
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月23日 下午2:21:02
  */
 @Controller
@@ -39,7 +45,7 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 前往注册网页
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午4:51:47
     * @param request
     * @param response
@@ -61,7 +67,7 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 注册操作
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午8:03:04
     * @param request
     * @param response
@@ -82,7 +88,7 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 获取短信验证码
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月23日 下午3:26:28
     * @param phone          电话号码
     * @param request
@@ -99,7 +105,7 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 查询聊呗信息
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午5:17:52
     * @param request
     * @param response
@@ -110,4 +116,34 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     public ModelAndView userQueryKey(HttpServletRequest request, HttpServletResponse response, String key) {
         return wechatUserPersonService.userQueryKey(key);
     }
+    
+    
+    
+    /**
+     * 一对一话术上传
+    * @author 李志伟
+    * @date 2019年8月19日 下午4:02:44
+    * @param file
+    * @return
+    * @throws IOException
+     */
+    @RequestMapping(value = "/batch/huashus/oto", method = RequestMethod.POST)
+    public BaseDto batchsXlsOTO(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws IOException {
+        return wechatUserPersonService.batchsXlsOTO(file.getInputStream(), file.getOriginalFilename());
+    }
+    
+    
+    /**
+     * 连环话术上传
+    * @author 李志伟
+    * @date 2019年8月19日 下午4:03:05
+    * @param file
+    * @return
+    * @throws IOException
+     */
+    @RequestMapping(value = "/batch/huashus/otw", method = RequestMethod.POST)
+    public BaseDto batchsXlsOTW(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws IOException {
+        return wechatUserPersonService.batchsXlsOTW(file.getInputStream(), file.getOriginalFilename());
+    }
+
 }

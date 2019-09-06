@@ -17,7 +17,7 @@
 //
 //    /**
 //     * 直播模式发送
-//    * @author 高国藩
+//    * @author 李志伟
 //    * @date 2017年3月10日 下午3:48:44
 //    * @param routingKey
 //    * @param object

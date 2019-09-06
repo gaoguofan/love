@@ -23,7 +23,7 @@ import org.apache.log4j.Logger;
  * @Blog http://blog.csdn.net/Cryhelyxx
  * @Email cryhelyxx@gmail.com
  * @Company GDITC
- * @author 高国藩
+ * @author 李志伟
  * @version 1.0
  */
 public class AddressUtils {

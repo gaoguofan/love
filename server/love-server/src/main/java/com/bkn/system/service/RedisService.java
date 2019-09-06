@@ -689,7 +689,7 @@ public class RedisService {
   
     /**
      * 添加一个或多个元素到集合(set)里
-    * @author 高国藩
+    * @author 李志伟
     * @date Sep 24, 2015 3:37:28 PM
     * @param key        set键    
     * @param member     需要添加的成员

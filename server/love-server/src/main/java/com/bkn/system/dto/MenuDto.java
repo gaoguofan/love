@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 菜单
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 上午12:10:00
  */
 public class MenuDto {

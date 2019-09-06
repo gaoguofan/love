@@ -41,7 +41,7 @@ import org.apache.log4j.Logger;
 
 /**
  * http请求工具类
-* @author 小高
+* @author 李志伟
 * @date Nov 23, 2015 9:44:49 AM
  */
 public class HttpClientUtil {
@@ -188,7 +188,7 @@ public class HttpClientUtil {
     
     /**
      * 发送POST请求，支持HTTP与HTTPS
-    * @author 小高
+    * @author 李志伟
     * @date Mar 11, 2016 4:22:11 PM
     * @param url        请求地址
     * @param params     请求参数
@@ -287,7 +287,7 @@ public class HttpClientUtil {
     
     /**
      * 以post的方式下载文件，返回文件的字节数组
-    * @author 小高
+    * @author 李志伟
     * @date Nov 23, 2015 9:59:03 AM
     * @param url    下载地址
     * @param params 请求参数
@@ -345,7 +345,7 @@ public class HttpClientUtil {
     
     /**
      * POST 发送Json数据
-    * @author 高国藩
+    * @author 李志伟
     * @date 2018年12月4日 上午11:55:25
     * @param url
     * @param requestBody
@@ -393,7 +393,7 @@ public class HttpClientUtil {
     
     /**
      * 将map参数转换为http参数
-    * @author 小高
+    * @author 李志伟
     * @date Nov 23, 2015 9:49:53 AM
     * @param params 请求参数对象
     * @return   http请求参数对象
@@ -415,7 +415,7 @@ public class HttpClientUtil {
     
     /**
      * 根据请求地址获取端口
-    * @author 小高
+    * @author 李志伟
     * @date Nov 23, 2015 9:46:57 AM
     * @param url    请求地址
     * @return   端口
@@ -474,7 +474,7 @@ public class HttpClientUtil {
     
     /**
      * 将httpResponse中的cookie信息保存进请求中
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年2月20日 上午10:39:02
     * @param httpResponse       结果集合
     * @param cookieStore        存入cookie中

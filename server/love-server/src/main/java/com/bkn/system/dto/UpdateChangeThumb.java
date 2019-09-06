@@ -2,7 +2,7 @@ package com.bkn.system.dto;
 
 /**
  * 更新图文消息，防止字段冲突问题
-* @author 高国藩
+* @author 李志伟
 * @date 2015年9月1日 上午11:28:08
  */
 public class UpdateChangeThumb {
@@ -26,7 +26,7 @@ public class UpdateChangeThumb {
     
     /**
      * 无参构造
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年9月1日 上午11:29:47
      */
     public UpdateChangeThumb() {

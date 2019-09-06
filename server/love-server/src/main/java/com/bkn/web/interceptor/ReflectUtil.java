@@ -4,14 +4,14 @@ import java.lang.reflect.Field;
 
 /**
  * map 辅助类
-* @author 高国藩
+* @author 李志伟
 * @date 2016年12月23日 上午10:43:15
  */
 public class ReflectUtil {  
 
     /**
      * 利用反射获取指定对象的指定属性  
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年12月23日 上午11:00:45
     * @param obj    obj
     * @param <T>    obj

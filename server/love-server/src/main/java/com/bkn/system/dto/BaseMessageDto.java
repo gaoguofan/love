@@ -2,7 +2,7 @@ package com.bkn.system.dto;
 
 /**
  * 基础消息类
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 上午12:06:26
  */
 public class BaseMessageDto {

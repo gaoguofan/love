@@ -20,7 +20,7 @@ import com.bkn.phone.service.WechatPublicPlatFormEventHandlerService;
 
 /**
  * 公众平台对接接口
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月14日 上午10:20:39
  */
 @Controller
@@ -31,7 +31,7 @@ public class WechatOauthMessageController extends WechatOauthBaseController {
 
     /**
      * 微信公众平台开发者模式启用
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 上午10:55:31
     * @param request        请求信息封装
     * @param response       返回信息
@@ -55,7 +55,7 @@ public class WechatOauthMessageController extends WechatOauthBaseController {
 
     /**
      * 公众平台返回用户请求
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月14日 上午11:05:51
     * @param request        request
     * @param response       response
@@ -74,7 +74,7 @@ public class WechatOauthMessageController extends WechatOauthBaseController {
     
     /**
      *  微信公众开放平台回调
-    * @author 高国藩
+    * @author 李志伟
     * @date Aug 17, 2015 3:54:23 PM
     * @param redirect       重定向地址
     * @param code           微信返回，用于获取授权的access token

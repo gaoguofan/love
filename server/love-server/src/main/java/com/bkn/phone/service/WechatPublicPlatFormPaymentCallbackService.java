@@ -41,7 +41,7 @@ import com.bkn.system.entity.LoveVipCoumerInfo;
 
 /**
  * 微信公众平台回调处理接口
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月14日 下午1:54:38
  */
 @Service
@@ -59,7 +59,7 @@ public class WechatPublicPlatFormPaymentCallbackService {
     
     /**
      * 进行支付操作，预存单生成
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午4:12:06
     * @param openId
     * @param outTradeNo
@@ -83,7 +83,7 @@ public class WechatPublicPlatFormPaymentCallbackService {
     
     /**
      * 微信网页支付统一接口
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年1月23日 上午11:27:35
     * @param goodsName
     * @param totalFee
@@ -166,7 +166,7 @@ public class WechatPublicPlatFormPaymentCallbackService {
     
     /**
      *  微信统一下单api，获取预付单信息
-    * @author 高国藩
+    * @author 李志伟
     * @date Sep 23, 2015 7:31:07 PM
     * @param xo                         订单信息
     * @return                           预付单信息
@@ -228,7 +228,7 @@ public class WechatPublicPlatFormPaymentCallbackService {
     
     /**
      * 支付成功回调
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午4:24:02
     * @param id
      */

@@ -1,7 +1,7 @@
 package com.bkn.browser.exception;
 /**
  * 
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 下午2:50:03
  */
 public class ServiceException extends RuntimeException {
@@ -20,7 +20,7 @@ public class ServiceException extends RuntimeException {
 
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 下午2:50:21
     * @param code 编码
     * @param msg 信息

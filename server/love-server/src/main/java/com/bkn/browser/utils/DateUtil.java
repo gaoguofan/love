@@ -285,7 +285,7 @@ public class DateUtil {
 	/**
 	 * 当前日期，yyyy-MM
 	 * 
-	 * @author 小高
+	 * @author 李志伟
 	 * @date Jan 13, 2016 11:47:34 PM
 	 * @param date
 	 *            date
@@ -834,7 +834,7 @@ public class DateUtil {
 
 	/**
 	 * 计算两个日期之间相差的分钟数
-	* @author 高国藩
+	* @author 李志伟
 	* @date 2018年7月2日 上午10:37:32
 	* @param smdate
 	* @param bdate
@@ -860,7 +860,7 @@ public class DateUtil {
 	/**
 	 * 传入数字时间,获得固定样式时间
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2015年9月7日 下午5:52:02
 	 * @param time
 	 *            数字时间
@@ -875,7 +875,7 @@ public class DateUtil {
 	/**
 	 * unix时间戳转指定格式时间字符串
 	 * 
-	 * @author 小高
+	 * @author 李志伟
 	 * @date Mar 21, 2016 11:48:09 PM
 	 * @param unixTime
 	 *            unix时间戳
@@ -993,7 +993,7 @@ public class DateUtil {
 	/**
 	 * 根据周几数字获得汉字
 	 * 
-	 * @author 小高
+	 * @author 李志伟
 	 * @date Oct 19, 2015 6:40:23 PM
 	 * @param weekNumber
 	 *            周几数字
@@ -1060,7 +1060,7 @@ public class DateUtil {
   
 	/**
 	 * 获取两个时间差的秒数
-	* @author 高国藩
+	* @author 李志伟
 	* @date 2019年6月5日 下午4:05:34
 	* @param beginTime
 	* @param endTime
@@ -1147,7 +1147,7 @@ public class DateUtil {
 	/**
 	 * 获取今年第一天
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午3:10:08
 	 * @return 获取今年第一天 yyyy-mm-dd
 	 */
@@ -1165,7 +1165,7 @@ public class DateUtil {
 	/**
 	 * 获取今年最后一天
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午3:10:08
 	 * @return 获取今年最后一天 yyyy-mm-dd
 	 */
@@ -1184,7 +1184,7 @@ public class DateUtil {
 	/**
 	 * 获取当前时间的上月对应时间
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午3:29:12
 	 * @return yyyy-mm-dd
 	 */
@@ -1198,7 +1198,7 @@ public class DateUtil {
 	/**
 	 * 获取当前时间的去年对应时间
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午3:29:12
 	 * @return yyyy-mm-dd
 	 */
@@ -1212,7 +1212,7 @@ public class DateUtil {
 	/**
 	 * 获取传入时间对应的几年后时间
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午3:29:12
 	 * @param dateTime 传入时间
 	 * @param yearNum 年数
@@ -1234,7 +1234,7 @@ public class DateUtil {
 	/**
 	 * 获取当前时间的去年对应时间
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午3:29:12
 	 * @return yyyy-mm-dd
 	 */
@@ -1249,7 +1249,7 @@ public class DateUtil {
 	/**
 	 * 获取当前时间前一天时间
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午3:34:19
 	 * @return yyyy-mm-dd
 	 */
@@ -1263,7 +1263,7 @@ public class DateUtil {
 	/**
 	 * 获取当前时间上个月前一天时间
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午3:34:19
 	 * @return yyyy-mm-dd
 	 */
@@ -1278,7 +1278,7 @@ public class DateUtil {
 	/**
 	 * 上一个月的最后一天
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午5:35:08
 	 * @return yyyy-mm-dd
 	 */
@@ -1324,7 +1324,7 @@ public class DateUtil {
 	/**
 	 * 传入一个时间,获得本月第一天
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午5:35:08
 	 * @param str
 	 *            时间
@@ -1351,7 +1351,7 @@ public class DateUtil {
 	/**
 	 * 传入一个时间,获得本月最后一天
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午5:35:08
 	 * @param str
 	 *            时间
@@ -1377,7 +1377,7 @@ public class DateUtil {
 	/**
 	 * 传入一个时间,获得上个月第一天
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午5:35:08
 	 * @param str
 	 *            时间
@@ -1404,7 +1404,7 @@ public class DateUtil {
 	/**
 	 * 传入一个时间,获得上个月最后一天
 	 * 
-	 * @author 高国藩
+	 * @author 李志伟
 	 * @date 2016年1月21日 下午5:35:08
 	 * @param str
 	 *            时间
@@ -1649,7 +1649,7 @@ public class DateUtil {
 	
     /**
      * 获取两个时间段相差的月数
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月26日 上午12:43:46 
     * @param date1 时间1
     * @param date2 时间2
@@ -1672,7 +1672,7 @@ public class DateUtil {
     
     /**
      * 获取两个时间段相差的月数
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月26日 上午12:43:46 
     * @param date1 时间1
     * @param date2 时间2

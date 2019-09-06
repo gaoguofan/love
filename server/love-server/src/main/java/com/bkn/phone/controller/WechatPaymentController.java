@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 
 /**
  * 微信支付,请求
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月14日 下午12:05:35
  */
 @Controller
@@ -33,7 +33,7 @@ public class WechatPaymentController {
     
     /**
      * 微信网页支付
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年1月23日 下午12:14:38
     * @param request
     * @param response
@@ -52,7 +52,7 @@ public class WechatPaymentController {
     
     /**
      * 微信支付网页支付-组合订单支付回调
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年1月24日 下午5:21:41
     * @param request
     * @param response

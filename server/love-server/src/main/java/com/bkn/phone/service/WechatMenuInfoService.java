@@ -21,7 +21,7 @@ import com.bkn.system.entity.LoveUserInfo;
 
 /**
  * 
-* @author 高国藩
+* @author 李志伟
 * @date 2019年6月17日 下午5:39:52
  */
 @Service
@@ -51,7 +51,7 @@ public class WechatMenuInfoService {
     
     /**
      * 文章详情信息
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月24日 下午3:31:43
     * @param id
     * @return
@@ -74,7 +74,7 @@ public class WechatMenuInfoService {
     
     /**
      * 课程详情信息
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月24日 下午4:15:46
     * @param id
     * @return

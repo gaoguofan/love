@@ -18,7 +18,7 @@ import com.bkn.browser.utils.DateUtil;
 
 /**
  * 短信服务类
-* @author 高国藩
+* @author 李志伟
 * @date Feb 26, 2016 8:48:40 PM
  */
 @Service
@@ -33,7 +33,7 @@ public class SmsService {
     
     /**
      * 获取短信验证码
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年1月11日 下午4:48:25
     * @param phoneNum
     * @param code

@@ -35,7 +35,7 @@ import com.bkn.web.interceptor.PageInterceptor;
  *      1. @PropertySource({"classpath:/properties/db.properties"}) 在属性上使用@Value
  *      2. PropertySourcesPlaceholderConfigurer 的实现,推荐此方法,原因有三(①使用该类,在xml中也可${}读取属性,②@Value也可使用,③可使用profile属性进行拓展)
  * }
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月11日 下午1:48:23
  */
 /**

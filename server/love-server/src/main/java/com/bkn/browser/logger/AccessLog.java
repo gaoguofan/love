@@ -6,7 +6,7 @@ import org.apache.log4j.net.SyslogAppender;
 
 /**
  * 
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 下午2:35:04
  */
 public class AccessLog {
@@ -17,7 +17,7 @@ public class AccessLog {
 
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 下午2:35:12
      */
     private static class CustomerLogLevel extends Level {
@@ -29,7 +29,7 @@ public class AccessLog {
 
         /**
          * 
-        * @author 高国藩
+        * @author 李志伟
         * @date 2015年8月11日 下午2:35:25
         * @param level 等级
         * @param levelStr 等级str 
@@ -47,7 +47,7 @@ public class AccessLog {
 
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 下午2:36:21
     * @param logger logger
     * @param info info

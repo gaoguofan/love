@@ -20,7 +20,7 @@ import org.apache.ibatis.plugin.Signature;
 
 /**
  * HashMap 查询结果集
- * @author 高国藩
+ * @author 李志伟
  * @date 2016年12月23日 上午10:55:23
  */
 /**
@@ -61,7 +61,7 @@ public class MapInterceptor implements Interceptor {
 
     /**
      * 根据page对象获取对应的分页查询Sql语句，这里只做了两种数据库类型，Mysql和Oracle 其它的数据库都 没有进行分页
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 下午2:56:15
     * @param resultSet resultSet
     * @param mapParam mapParam

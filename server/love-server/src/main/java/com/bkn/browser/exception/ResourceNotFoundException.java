@@ -2,7 +2,7 @@ package com.bkn.browser.exception;
 
 /**
  * 
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 下午2:49:25
  */
 public class ResourceNotFoundException extends RuntimeException {
@@ -14,7 +14,7 @@ public class ResourceNotFoundException extends RuntimeException {
 
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 下午2:49:32
      */
     public ResourceNotFoundException() {
@@ -23,7 +23,7 @@ public class ResourceNotFoundException extends RuntimeException {
 
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 下午2:49:34
     * @param message msg
     * @param cause c
@@ -34,7 +34,7 @@ public class ResourceNotFoundException extends RuntimeException {
 
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 下午2:49:37
     * @param message msg
      */
@@ -44,7 +44,7 @@ public class ResourceNotFoundException extends RuntimeException {
 
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月11日 下午2:49:39
     * @param cause c
      */

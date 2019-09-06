@@ -2,7 +2,7 @@ package com.bkn.system.dto;
 
 /**
  * 图文消息medaiId特殊处理
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 上午12:19:43
  */
 public class MediaIdDto {

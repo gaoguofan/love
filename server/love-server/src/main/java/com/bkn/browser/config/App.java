@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 系统业务常量类
  *
- * @author 小高
+ * @author 李志伟
  * @date Aug 4, 2015 9:19:50 AM
  */
 public interface App {
