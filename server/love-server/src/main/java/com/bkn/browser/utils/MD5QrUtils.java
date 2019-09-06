@@ -10,7 +10,7 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * md5工具列
-* @author 高国藩
+* @author 李志伟
 * @date 2016年5月10日 下午6:10:44
  */
 public class MD5QrUtils {
@@ -36,7 +36,7 @@ public class MD5QrUtils {
 
     /**
      * 对文件进行MD5加密 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:15:12
     * @param file    file
     * @return         String
@@ -54,7 +54,7 @@ public class MD5QrUtils {
 
     /**
      * 对str进行MD5加密 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:15:12
     * @param s    s
     * @return         String
@@ -66,7 +66,7 @@ public class MD5QrUtils {
 
     /**
      * 对byte类型的数组进行MD5加密 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:15:12
     * @param bytes    bytes
     * @return         String
@@ -79,7 +79,7 @@ public class MD5QrUtils {
 
     /**
      * 对bytes进行MD5加密 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:15:12
     * @param bytes    bytes
     * @return         String
@@ -91,7 +91,7 @@ public class MD5QrUtils {
 
     /**
      * 对str进行MD5加密 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:15:12
     * @param bytes    bytes
     * @param m    m

@@ -34,7 +34,7 @@ import com.thoughtworks.xstream.io.xml.XppDriver;
 
 /**
  * 消息工具类
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月6日 上午9:38:53 
 *
  */
@@ -304,7 +304,7 @@ public class MessageUtil {
 
     /**
      * 获得当前月--结束日期
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月19日 下午7:33:09
     * @return String
      */
@@ -318,7 +318,7 @@ public class MessageUtil {
     
     /**
      * javaBean转Map
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年12月11日 下午2:21:51
     * @param obj  与转换对象
     * @return     map

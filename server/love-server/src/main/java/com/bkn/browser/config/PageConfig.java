@@ -2,14 +2,14 @@ package com.bkn.browser.config;
 
 /**
  * 视图地址常量类，定义时使用根目录/WEB-INF/views/下对绝对地址
- * @author 小高
+ * @author 李志伟
  * @date Aug 4, 2015 9:21:29 AM
  */
 public interface PageConfig {
 
     /**
      * 网页端访问路由
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月10日 下午3:39:02
      */
 	class BrowserIndex {
@@ -94,7 +94,7 @@ public interface PageConfig {
 	}
 	/**
 	 * 移动端
-	* @author 高国藩
+	* @author 李志伟
 	* @date 2017年3月16日 上午10:34:43
 	 */
 	class Wechat {

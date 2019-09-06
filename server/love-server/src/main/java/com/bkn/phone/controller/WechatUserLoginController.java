@@ -29,7 +29,7 @@ import com.google.gson.reflect.TypeToken;
 
 /**
  * 移动端登陆操作
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月23日 下午2:21:02
  */
 @Controller
@@ -45,7 +45,7 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 前往注册网页
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午4:51:47
     * @param request
     * @param response
@@ -67,7 +67,7 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 注册操作
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午8:03:04
     * @param request
     * @param response
@@ -88,7 +88,7 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 获取短信验证码
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月23日 下午3:26:28
     * @param phone          电话号码
     * @param request
@@ -105,7 +105,7 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 查询聊呗信息
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午5:17:52
     * @param request
     * @param response
@@ -121,13 +121,13 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 一对一话术上传
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年8月19日 下午4:02:44
     * @param file
     * @return
     * @throws IOException
      */
-    @RequestMapping(value = "/bus/batch/huashus/oto", method = RequestMethod.POST)
+    @RequestMapping(value = "/batch/huashus/oto", method = RequestMethod.POST)
     public BaseDto batchsXlsOTO(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws IOException {
         return wechatUserPersonService.batchsXlsOTO(file.getInputStream(), file.getOriginalFilename());
     }
@@ -135,13 +135,13 @@ public class WechatUserLoginController extends WechatOauthBaseController{
     
     /**
      * 连环话术上传
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年8月19日 下午4:03:05
     * @param file
     * @return
     * @throws IOException
      */
-    @RequestMapping(value = "/bus/batch/huashus/otw", method = RequestMethod.POST)
+    @RequestMapping(value = "/batch/huashus/otw", method = RequestMethod.POST)
     public BaseDto batchsXlsOTW(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws IOException {
         return wechatUserPersonService.batchsXlsOTW(file.getInputStream(), file.getOriginalFilename());
     }

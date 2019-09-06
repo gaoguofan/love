@@ -2,7 +2,7 @@ package com.bkn.system.dto;
 
 /**
  * 修改图文消息DTO
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月31日 下午3:15:26
  */
 public class UpdateItemsDto {
@@ -40,7 +40,7 @@ public class UpdateItemsDto {
     }
     /**
      * 午餐
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月31日 下午7:39:16
      */
     public UpdateItemsDto() {
@@ -48,7 +48,7 @@ public class UpdateItemsDto {
     }
     /**
      * 修改图文消息构造
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月31日 下午7:51:44
     * @param media_id a
     * @param index a

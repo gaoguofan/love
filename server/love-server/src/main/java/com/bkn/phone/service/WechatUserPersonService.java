@@ -41,7 +41,7 @@ import net.sf.json.JSONObject;
 
 /**
  * 移动端用户个人版面
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月16日 下午8:38:53
  */
 @Service
@@ -61,7 +61,7 @@ public class WechatUserPersonService {
     
     /**
      * 注册页面
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年1月21日 上午10:39:39
     * @param openId
     * @return
@@ -80,7 +80,7 @@ public class WechatUserPersonService {
 
     /**
      * 获取验证码
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月23日 下午3:31:47
     * @param phone  phone
     * @return       BaseDto
@@ -98,7 +98,7 @@ public class WechatUserPersonService {
    
     /**
      * 提取中文汉字
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年4月20日 下午1:44:44
     * @param paramValue 预提取中文汉字
     * @return           提取结果
@@ -116,7 +116,7 @@ public class WechatUserPersonService {
 
     /**
      * 搜索聊呗信息
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午5:27:13
     * @param key
     * @return
@@ -132,7 +132,7 @@ public class WechatUserPersonService {
     
     /**
      * 一对一话术上传
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年8月19日 下午3:25:33
     * @param in
     * @param fileName
@@ -183,7 +183,7 @@ public class WechatUserPersonService {
     
     /**
      * 连环话术上传
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年8月19日 下午3:40:33
     * @param in
     * @param fileName
@@ -216,7 +216,7 @@ public class WechatUserPersonService {
     
     /**
      * 连环话术拼接数据结构
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年8月19日 下午3:49:01
     * @param xssfRow
     * @param index
@@ -244,7 +244,7 @@ public class WechatUserPersonService {
     
     /**
      * 递归插入话术信息库
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年8月19日 下午1:32:55
     * @param liaobeiQuestion
     * @return
@@ -262,7 +262,7 @@ public class WechatUserPersonService {
     
     /**
      * 持久化单条数据信息
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年8月19日 下午1:39:05
     * @param liaobeiQuestion
     * @return
@@ -283,7 +283,7 @@ public class WechatUserPersonService {
 
     /**
      * 实现注册操作
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午8:04:40
     * @param openId
     * @param accessToken

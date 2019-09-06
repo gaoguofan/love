@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 拉取永久图文素材,对应字段值
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 上午12:07:19
  */
 public class ItemDto {

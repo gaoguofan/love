@@ -4,14 +4,14 @@ package com.bkn.browser.config;
 /**
  * 接口地址常量类，定义时使用根目录下的绝对地址
  *
- * @author 小高
+ * @author 李志伟
  * @date Aug 4, 2015 9:20:30 AM
  */
 public interface RouteConfig {
     
     /**
      * 登陆类
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月11日 下午3:31:15
      */
     class Login {
@@ -173,7 +173,7 @@ public interface RouteConfig {
     }
     /**
      * 移动支付类
-     * @author 高国藩
+     * @author 李志伟
      * @date 2016年5月10日 下午6:00:20
      */
     class AppPay {
@@ -299,7 +299,7 @@ public interface RouteConfig {
     
     /**
      * 用户微信接口地址
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月16日 上午10:06:26
      */
     class WechatUser {

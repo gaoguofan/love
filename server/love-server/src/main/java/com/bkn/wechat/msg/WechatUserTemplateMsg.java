@@ -15,7 +15,7 @@ import net.sf.json.JSONObject;
 
 /**
  * 微信消息，模板信息推送
-* @author 高国藩
+* @author 李志伟
 * @date 2018年12月4日 上午11:27:11
  */
 @Component
@@ -39,7 +39,7 @@ public class WechatUserTemplateMsg extends WechatOauthBaseController {
     
     /**
      * 测评费用提醒模板通知
-    * @author 高国藩
+    * @author 李志伟
     * @date 2018年12月4日 上午11:50:54
     * @param openId             微信用户标示
     * @param accessToken        公众平台授权码
@@ -83,7 +83,7 @@ public class WechatUserTemplateMsg extends WechatOauthBaseController {
     
     /**
      * 测评订单支付完成通知
-    * @author 高国藩
+    * @author 李志伟
     * @date 2018年12月4日 下午12:21:29
     * @param openId         微信用户授权码
     * @param orderNo        订单标号
@@ -125,7 +125,7 @@ public class WechatUserTemplateMsg extends WechatOauthBaseController {
     
     /**
      * 系统录入测评数据完成
-    * @author 高国藩
+    * @author 李志伟
     * @date 2018年12月4日 下午12:27:43
     * @param openId         微信授权码
     * @param orderNo        测评订单标示
@@ -156,7 +156,7 @@ public class WechatUserTemplateMsg extends WechatOauthBaseController {
     
     /**
      * 诊断报告分析推送
-    * @author 高国藩
+    * @author 李志伟
     * @date 2018年12月4日 下午12:38:14
     * @param openId         微信授权码
     * @param projectName    测评项目名称    
@@ -193,7 +193,7 @@ public class WechatUserTemplateMsg extends WechatOauthBaseController {
     
     /**
      * 门店下单，请求会员支付通知
-    * @author 高国藩
+    * @author 李志伟
     * @date 2018年12月4日 下午1:22:23
     * @param openId     微信授权码
     * @param orderNo    订单编号
@@ -234,7 +234,7 @@ public class WechatUserTemplateMsg extends WechatOauthBaseController {
     
     /**
      * 测评订单支付完成通知
-    * @author 高国藩
+    * @author 李志伟
     * @date 2018年12月4日 下午12:21:29
     * @param openId         微信用户授权码
     * @param orderNo        订单标号
@@ -278,7 +278,7 @@ public class WechatUserTemplateMsg extends WechatOauthBaseController {
     
     /**
      * 订单状态实时推送提醒
-    * @author 高国藩
+    * @author 李志伟
     * @date 2018年12月4日 下午1:14:35
     * @param openId         微信授权码
     * @param orderNo        订单编号

@@ -45,7 +45,7 @@ import org.springframework.core.io.UrlResource;
 
             架构问题:综合在javaconfig的条件下,如果将MapperScannerConfigurer配置于dateSrouceConfig.class中将导致@Value返回Null,配置失败
             解决办法有两种,第一将MapperScannerConfigurer配置于父容器中,第二种在dateSrouceConfig中使用@MapperScan(basePackages={"com.bkn.browser.mybatis",...})
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月11日 下午11:51:53
  */
 @Import({RedisSourceConfig.class, DataSourceConfig.class})

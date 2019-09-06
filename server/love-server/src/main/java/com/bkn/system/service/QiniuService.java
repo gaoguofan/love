@@ -29,7 +29,7 @@ import com.qiniu.util.StringMap;
 
 /**
  * 七牛api接口服务类
-* @author 高国藩
+* @author 李志伟
 * @date Aug 21, 2015 5:49:35 PM 
 */
 @Service
@@ -74,7 +74,7 @@ public class QiniuService {
 
     /**
      * 获取默认上传策略的token
-    * @author 高国藩
+    * @author 李志伟
     * @date Nov 23, 2015 10:02:10 AM
     * @return   token
      */
@@ -89,7 +89,7 @@ public class QiniuService {
    
     /**
      * 抓取网络资源上传到七牛
-    * @author 高国藩
+    * @author 李志伟
     * @date Aug 22, 2015 11:36:03 AM
     * @param fromUrl       资源文件地址
     * @param key           七牛目标地址
@@ -108,7 +108,7 @@ public class QiniuService {
     
     /**
      * 文字转语音
-    * @author 高国藩
+    * @author 李志伟
     * @date Nov 23, 2015 10:59:06 AM
     * @param text   需要转换的文字
     * @param per    发音人，1:男性，0:女性
@@ -145,7 +145,7 @@ public class QiniuService {
     
     /**
      * 上传文件到七牛
-    * @author 高国藩
+    * @author 李志伟
     * @date Nov 23, 2015 11:33:39 AM
     * @param file   需上传的文件   
     * @param key    七牛目标地址
@@ -159,7 +159,7 @@ public class QiniuService {
     
     /**
      * 上传文件到七牛
-    * @author 高国藩
+    * @author 李志伟
     * @date Nov 23, 2015 11:33:39 AM
     * @param data   字节数组  
     * @param key    七牛目标地址
@@ -173,7 +173,7 @@ public class QiniuService {
     
     /**
      * 上传文件到七牛
-    * @author 高国藩
+    * @author 李志伟
     * @date Nov 23, 2015 11:33:39 AM
     * @param filepath   需上传的文件路径   
     * @param key    七牛目标地址
@@ -187,7 +187,7 @@ public class QiniuService {
     
     /**
      * 将base64上传至七牛图片库
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年11月9日 下午8:13:37
     * @param stringBase64 js生成的base64数据
     * @param key 自定义key
@@ -235,7 +235,7 @@ public class QiniuService {
     
     /**
      * HTTPS 请求方式
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月10日 下午11:47:59
     * @param requestUrl 请求链接
     * @param requestMethod 请求方式
@@ -293,7 +293,7 @@ public class QiniuService {
     
     /**
      * 获取上传默认策略的token
-    * @author 高国藩
+    * @author 李志伟
     * @date Nov 22, 2015 10:33:30 PM
     * @return   token
      */
@@ -303,7 +303,7 @@ public class QiniuService {
     
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date Aug 22, 2015 11:56:02 AM
     * @param mediaid        微信的资源id
     * @param key            七牛目标地址

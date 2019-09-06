@@ -22,7 +22,7 @@ import net.sf.json.JSONObject;
 
 /**
  * 授权分类,授权回调,accesstonen,openId,web环境临时票据 等....
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月14日 下午2:26:31
  */
 public class WechatOauthBaseController {
@@ -34,7 +34,7 @@ public class WechatOauthBaseController {
     
     /**
      * 微信开放授权平台授权
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年2月28日 下午4:36:19
     * @param request        request
     * @param response       response
@@ -53,7 +53,7 @@ public class WechatOauthBaseController {
     
     /**
      * 获取微信accessToken接口的临时票据
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月25日 上午10:19:45
     * @param request request
     * @return        accessToken
@@ -118,7 +118,7 @@ public class WechatOauthBaseController {
     
     /**
      * 微信授权平台,发起公众授权,模式为默认基础模式
-    * @author 高国藩
+    * @author 李志伟
     * @date Aug 17, 2015 4:35:42 PM
     * @param openidKey      存储openid的session key
     * @param appId          appId    
@@ -152,7 +152,7 @@ public class WechatOauthBaseController {
     
     /**
      * 获取请求地址的绝对路径
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月14日 下午2:00:33
     * @param request
     * @return
@@ -168,7 +168,7 @@ public class WechatOauthBaseController {
     
     /**
      * 判断是否是ajax请求
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月14日 下午2:01:27
     * @param request
     * @return

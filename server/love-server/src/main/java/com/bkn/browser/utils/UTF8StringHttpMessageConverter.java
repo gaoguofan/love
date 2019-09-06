@@ -16,7 +16,7 @@ import org.springframework.util.FileCopyUtils;
 
 /**
  * 
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 下午2:31:25
  */
 public class UTF8StringHttpMessageConverter extends AbstractHttpMessageConverter<String> {

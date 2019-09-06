@@ -23,7 +23,7 @@ import com.bkn.web.interceptor.SessionInterceptor;
 
 /**
  * MVC 路由控制方式,存放入子类应用上下文中
-* @author 高国藩
+* @author 李志伟
 * @date 2017年3月10日 下午6:08:37
  */
 @Configuration  

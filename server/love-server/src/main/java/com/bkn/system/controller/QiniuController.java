@@ -73,7 +73,7 @@ public class QiniuController extends WechatOauthBaseController {
     
     /**
      * 将base64上传至七牛图片库
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年11月9日 下午8:13:37
     * @param qiniu 七牛上传参数
     * @return 七牛地址
@@ -87,7 +87,7 @@ public class QiniuController extends WechatOauthBaseController {
     
     /**
      * 上传微信media到七牛
-    * @author 高国藩
+    * @author 李志伟
     * @date Aug 22, 2015 11:53:15 AM
     * @param mediaid    微信的资源id
     * @param key        七牛目标地址

@@ -22,7 +22,7 @@ import net.sf.json.JSONObject;
 
 /**
  * 公众平台推送事件处理
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 上午11:47:56
  */
 @Service
@@ -35,7 +35,7 @@ public class WechatPublicPlatFormEventHandlerService {
 	
 	/**
 	 * 微信后台服务监控
-	* @author 高国藩
+	* @author 李志伟
 	* @date 2016年10月18日 下午4:05:23
 	* @param request      request
 	* @return             提醒内容
@@ -81,7 +81,7 @@ public class WechatPublicPlatFormEventHandlerService {
 	
 	/**
      *  微信授权回调处理
-    * @author 高国藩
+    * @author 李志伟
     * @date Aug 17, 2015 3:54:23 PM
     * @param redirect       重定向地址
     * @param code           微信返回，用于获取授权的access token
@@ -129,7 +129,7 @@ public class WechatPublicPlatFormEventHandlerService {
 	
 	/**
 	 * 处理关注事件
-	* @author 高国藩
+	* @author 李志伟
 	* @date 2016年10月18日 下午4:23:27
 	* @param openId        用户ID
 	* @param storeWechatId 公众号原始ID
@@ -143,7 +143,7 @@ public class WechatPublicPlatFormEventHandlerService {
 	
 	/**
 	 * 用户扫描票据二维码进入公众号
-	* @author 高国藩
+	* @author 李志伟
 	* @date 2016年10月18日 下午5:58:38
 	* @param openId              openId
 	* @param storeWechatId       storeWechatId
@@ -157,7 +157,7 @@ public class WechatPublicPlatFormEventHandlerService {
 	
 	/**
      * 用户取消关注
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年10月18日 下午5:58:38
     * @param openId              openId
     * @param storeWechatId       storeWechatId
@@ -172,7 +172,7 @@ public class WechatPublicPlatFormEventHandlerService {
 	
 	/**
 	 * 获得文本自动回复的信息
-	* @author 高国藩
+	* @author 李志伟
 	* @date 2015年8月11日 上午11:42:57
 	* @param context 文本内容
 	* @param fromUserName 发送者
@@ -192,7 +192,7 @@ public class WechatPublicPlatFormEventHandlerService {
 	
 	/**
 	 * 回复图文消息,活动
-	* @author 高国藩
+	* @author 李志伟
 	* @date 2015年8月11日 上午11:47:10
 	* @param fromUserName 发送者
 	* @param storeWechatId 接受者

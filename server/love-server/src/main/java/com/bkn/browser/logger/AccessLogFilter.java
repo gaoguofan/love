@@ -5,7 +5,7 @@ import org.apache.log4j.spi.LoggingEvent;
 
 /**
  * 
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 下午2:35:01
  */
 public class AccessLogFilter extends Filter{

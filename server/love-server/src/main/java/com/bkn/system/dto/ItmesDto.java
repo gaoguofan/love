@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 通过mediaId获得图文消息对应实体
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 上午12:07:51
  */
 public class ItmesDto {

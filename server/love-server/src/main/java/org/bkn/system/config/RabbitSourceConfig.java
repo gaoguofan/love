@@ -35,7 +35,7 @@
 //            对于AOP这种编程思想，很多框架都进行了实现。Spring就是其中之一，可以完成面向切面编程。然而，AspectJ也实现了AOP的功能，且实现方式更为简捷，
 //            使用更加方便，而且还支持注解式开发。所以，Spring又将AspectJ对于AOP的实现也引入到了自己的框架中。
 //            在Spring中使用AOP开发时，一般使用AspectJ的实现方式。
-//* @author 高国藩
+//* @author 李志伟
 //* @date 2017年3月12日 上午1:08:58
 // */
 //public class RabbitSourceConfig {

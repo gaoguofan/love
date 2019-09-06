@@ -2,7 +2,7 @@ package com.bkn.system.dto;
 
 /**
  * 修改图文消息详情
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月31日 下午7:37:45
  */
 public class UpdateArticleDto {

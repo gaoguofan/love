@@ -10,14 +10,14 @@ import org.apache.poi.ss.usermodel.Cell;
 
 /**
  * Excle 操作数据
-* @author 高国藩
+* @author 李志伟
 * @date 2015年11月18日 下午3:45:26
  */
 public class ExcleUtils {
 
     /**
      * 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年11月18日 下午3:45:38
     * @param cell 表格
     * @return     数据Str
@@ -60,7 +60,7 @@ public class ExcleUtils {
     
     /**
      * 判断手机号码是否合法
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年12月16日 下午7:31:24
     * @param phone   电话号码
     * @return        false
@@ -83,7 +83,7 @@ public class ExcleUtils {
     
     /**
      * 将传入的字符串转换位可以进行数据格式化的字符串
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年12月16日 下午7:32:31
     * @param str     带处理的字符串
     * @return        可以进行数据格式化的字符串
@@ -108,7 +108,7 @@ public class ExcleUtils {
     
     /**
      * 判断是否为数字
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年8月12日 下午6:28:43
     * @param number number
     * @return       boolean

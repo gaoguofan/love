@@ -2,7 +2,7 @@ package com.bkn.system.dto;
 
 /**
  * 分组范松
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 下午5:18:47
  */
 public class GroupInfoDto {

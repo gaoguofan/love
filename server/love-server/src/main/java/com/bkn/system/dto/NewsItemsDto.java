@@ -2,7 +2,7 @@ package com.bkn.system.dto;
 
 /**
  * 本地存储一个图文消息
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 上午12:13:06
  */
 public class NewsItemsDto {

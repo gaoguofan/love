@@ -80,7 +80,7 @@ public class StringUtil {
 
     /**
      * 判断字符串是否为空
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月15日 下午4:22:57
     * @param str
     * @return
@@ -91,7 +91,7 @@ public class StringUtil {
 
     /**
      * 判断字符串是否不为空
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月15日 下午4:22:48
     * @param str
     * @return
@@ -366,7 +366,7 @@ public class StringUtil {
 
     /**
      * escape 加密
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月4日 下午2:13:53
     * @param src src
     * @return    src
@@ -397,7 +397,7 @@ public class StringUtil {
 
     /**
      * escape 解密,ajax传输json对象,对于'\'等一些转译进行解密,JavaScript中使用escape对参数进行加密
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月4日 下午2:13:53
     * @param src src
     * @return    src
@@ -437,7 +437,7 @@ public class StringUtil {
 
     /**
      * 如果传入的参数是空，返回0
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年8月5日 下午6:21:42
     * @param str   str
     * @return      String
@@ -455,7 +455,7 @@ public class StringUtil {
 
     /**
      * 获取一个手机号码
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年9月7日 下午5:32:15
     * @return String
      */
@@ -469,7 +469,7 @@ public class StringUtil {
 
     /**
      * 获取一个指定范围内的随机码
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年9月7日 下午5:31:55
     * @param start start
     * @param end   end

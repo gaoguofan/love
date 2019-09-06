@@ -17,7 +17,7 @@ import com.bkn.phone.service.WechatMenuInfoService;
 
 /**
  * 菜单导航信息
-* @author 高国藩
+* @author 李志伟
 * @date 2019年6月17日 下午5:38:02
  */
 @Controller
@@ -27,7 +27,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 前往首页
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午5:38:45
     * @param request
     * @param response
@@ -42,7 +42,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 前往聊天实战
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午5:47:55
     * @param request
     * @param response
@@ -56,7 +56,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 查询文章详情信息
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月24日 下午3:30:31
     * @param request
     * @param response
@@ -70,7 +70,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 前往课程中心
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午5:53:06
     * @param request
     * @param response
@@ -84,7 +84,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 查看课程详情
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月24日 下午4:15:23
     * @param request
     * @param response
@@ -99,7 +99,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 前往会员中心
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午5:53:28
     * @param request
     * @param response
@@ -117,7 +117,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 升级会员
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午6:07:32
     * @param request
     * @param response
@@ -131,7 +131,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 我的订单
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午6:12:06
     * @param request
     * @param response
@@ -145,7 +145,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 单条明细
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午7:47:36
     * @param request
     * @param response
@@ -159,7 +159,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 话术加锁
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月17日 下午7:48:23
     * @param request
     * @param response
@@ -173,7 +173,7 @@ public class WechatMenuInfoController extends WechatOauthBaseController{
     
     /**
      * 进入支付网页{@link WechatPaymentController.getNativeCode()}
-    * @author 高国藩
+    * @author 李志伟
     * @date 2019年6月24日 下午4:22:32
     * @param request
     * @param response

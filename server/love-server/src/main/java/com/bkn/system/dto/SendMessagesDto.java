@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * 群发消息内容
-* @author 高国藩
+* @author 李志伟
 * @date 2015年8月11日 下午2:27:17
  */
 public class SendMessagesDto {
@@ -64,7 +64,7 @@ public class SendMessagesDto {
 
     /**
      * 无参构造
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月13日 上午10:30:02
      */
     public SendMessagesDto() {
@@ -73,7 +73,7 @@ public class SendMessagesDto {
 
     /**
      * 群发文本
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月13日 上午10:29:08
     * @param touser 接受者
     * @param text 文本内容 "text": { "content": "hello from boxer."}
@@ -89,7 +89,7 @@ public class SendMessagesDto {
 
     /**
      * 群发图文
-    * @author 高国藩
+    * @author 李志伟
     * @date 2015年8月13日 上午10:24:50
     * @param touser 接受者
     * @param mpnews 素材ID

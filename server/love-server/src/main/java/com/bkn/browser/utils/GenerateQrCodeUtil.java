@@ -19,7 +19,7 @@ import com.google.zxing.common.BitMatrix;
 
 /**
  * QR 生成器
-* @author 高国藩
+* @author 李志伟
 * @date 2016年5月10日 下午4:33:47
  */
 public class GenerateQrCodeUtil {
@@ -78,7 +78,7 @@ public class GenerateQrCodeUtil {
 
     /**
      * 二进制写入本地文件中
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:09:21
     * @param matrix matrix
     * @param format format
@@ -96,7 +96,7 @@ public class GenerateQrCodeUtil {
 
     /**
      * buffer -> image
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:09:40
     * @param matrix matrix
     * @return BufferedImage
@@ -116,7 +116,7 @@ public class GenerateQrCodeUtil {
 
     /**
      * 加密
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:09:57
     * @param bytes 被加密二进制
     * @return      密文

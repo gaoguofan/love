@@ -10,7 +10,7 @@ public class SortingAlgorithmUtils {
     * 经典插入排序法
     * 通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应的位置并插入。
     * --排序扑克牌
-   * @author 高国藩
+   * @author 李志伟
    * @date 2017年3月17日 下午12:42:58
    * @return
     */
@@ -30,7 +30,7 @@ public class SortingAlgorithmUtils {
     
     /**
      * 经典冒泡排序
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月17日 上午11:59:52
     * @return
      */
@@ -52,7 +52,7 @@ public class SortingAlgorithmUtils {
     /**
      * 简单选择排序
      * 基本思想：在要排序的一组数中，选出最小的一个数与第一个位置的数交换； 然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一个数比较为止。 
-    * @author 高国藩
+    * @author 李志伟
     * @date 2017年3月17日 下午2:01:52
     * @return
      */

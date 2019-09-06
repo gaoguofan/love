@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 
 /**
  * MD5三元加密
-* @author 高国藩
+* @author 李志伟
 * @date 2016年5月10日 下午6:19:15
  */
 public class MD5Util {
@@ -14,7 +14,7 @@ public class MD5Util {
 
     /**
      * b md5加密
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:19:27
     * @param b b
     * @return  str
@@ -29,7 +29,7 @@ public class MD5Util {
 
     /**
      * byte 加密
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:20:07
     * @param b b
     * @return  str
@@ -46,7 +46,7 @@ public class MD5Util {
 
     /**
      * 使用编码进行加密
-    * @author 高国藩
+    * @author 李志伟
     * @date 2016年5月10日 下午6:20:54
     * @param origin       origin
     * @param charsetname  "UTF-8"
