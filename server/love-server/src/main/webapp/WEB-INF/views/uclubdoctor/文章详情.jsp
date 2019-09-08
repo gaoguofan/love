@@ -17,6 +17,7 @@
 <body>
 	<%@include file="wechatBase.jsp"%>
 	<%@include file="dialog.jsp"%>
+	<%@include file="禁止下拉.jsp"%>
     ${loveArticleInfos.articleContent }
 </body>
 </html>

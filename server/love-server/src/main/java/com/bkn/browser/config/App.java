@@ -27,9 +27,9 @@ public interface App {
 		/** 消息队列主机 */
 		public static final String NOTYNOCE_SERVER_HOST = "120.24.165.15";
 		/** 服务器地址 */
-		public static final String SERVER_BASE_URL = "http://" + SERVER_HOST + "/love-server";
+		public static final String SERVER_BASE_URL = "http://" + SERVER_HOST + "/love";
 		/** 项目根目录 */
-        public static final String SERVER_CONTEXT_LOADER = "love-server";
+        public static final String SERVER_CONTEXT_LOADER = "love";
 		/** 权限不足 */
 		public static final int ERROR_CODE_FORBIDDEN = HttpServletResponse.SC_FORBIDDEN;
 		/** 会话失效 */

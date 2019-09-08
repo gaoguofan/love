@@ -373,6 +373,17 @@ a {
 .aui-che-item a {
 	color: #4c7ee9;
 }
+
+.scroll{
+		position:absolute; 
+		overflow:scroll; 
+		-webkit-overflow-scrolling: touch; 
+		top:0; 
+		left:0; 
+		bottom:0; 
+		right:0;
+	}
+
 </style>
 <script type="text/javascript">
 	function send_ver() {
@@ -436,7 +447,8 @@ a {
 		});
 	}
 </script>
-<body>
+<body class="scroll">
+<%@include file="禁止下拉.jsp"%>
 	<section class="aui-flexView">
 		<header class="aui-navBar aui-navBar-fixed">
 			<a href="javascript:;" class="aui-navBar-item"> 
@@ -488,4 +500,10 @@ a {
 	<%@include file="wechatBase.jsp"%>
 	<%@include file="dialog.jsp"%>
 </body>
+<script type="text/javascript">
+document.querySelector('body').addEventListener('touchmove', function(e) {
+    e.preventDefault();
+})
+
+</script>
 </html>

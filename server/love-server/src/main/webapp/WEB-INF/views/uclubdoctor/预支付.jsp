@@ -16,6 +16,7 @@
 </svg>
 	<%@include file="wechatBase.jsp"%>
 	<%@include file="dialog.jsp"%>
+	<%@include file="禁止下拉.jsp"%>
 	<script type="text/javascript">
 	var info = '${info}';
 	var openId = '${openId}';
